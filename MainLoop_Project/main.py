@@ -3,33 +3,53 @@
 #H == help
 #C == counter
 
-do_i_work = True
-if do_i_work == "E":
-    do_i_work = False
-    while do_i_work != "E":
-        if do_i_work == "H":
-            print('Для выхода введите Е')
-            print('Press F to pay respect')
-            print('Введите С чтобы запустить счётчик')
-        elif do_i_work == "C":
-            op = input('Выберите операцию: ')
-            if op == "+":
-                a = 0
-                b = int(input('Введите число: '))
-                if b != 0:
-                    while b != 0:
-                        a += b
-                        print(a)
-                        b = int(input('Введите число: '))
-                    print(f'Ответ: {a}')
-                elif op == "-":
-                    a = int(input('Введите число: '))
+print("||========================|")
+print("||      -=[name]=-        |")
+print("||========================|")
+print("||                        |")
+print("|| [1] >> counter         |")
+print("|| [2] >>                 |")
+print("||                        |")
+print("|| [H] >> help            |")
+print("|| [F} >> to pay respect  |")
+print("||                        |")
+print("|| [E] >> exit            |")
+print("||========================|")
+
+working = True
+while working == True:
+
+    is_working = input("Введите continue чтобы продолжить, введите E чтобы выйти: ")
+    if is_working =="continue":
+        working = True
+    elif is_working =="E":
+        working = False
+        break
+
+    Activity = input('Введите название операции: ')
+
+    if Activity == "1":
+        oprt = input('Введите тип операции: ')
+        if oprt == "+":
+            a = 0
+            b = int(input('Введите число: '))
+            if b!=0:
+                while b!=0:
+                    a += b
+                    print(a)
                     b = int(input('Введите число: '))
-                    if b != 0:
-                        while b != 0:
-                            a -= b
-                            print(a)
-                            b = int(input('Введите число: '))
-                        print(f'Ответ: {a}')
-        elif do_i_work == "F":
-            print('Respect')
+                print(f"Ответ: {a}")
+        elif oprt == "-":
+            a = int(input('Введите число: '))
+            b = int(input('Введите число: '))
+            if b!=0:
+                while b!=0:
+                    a -= b
+                    print(a)
+                    b = int(input('Введите число: '))
+                print(f'Ответ: {a}')
+
+    elif Activity == "F":
+        print("||========================|")
+        print("||     -=[Respect]=       |")
+        print("||========================|")
