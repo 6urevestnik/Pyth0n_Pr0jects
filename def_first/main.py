@@ -1,18 +1,3 @@
-#start
-
-print('|=================================================|')
-print('|              -=[Something v.1]=-                |')
-print('|=================================================|')
-print('|                                                 |')
-print('| [1] >> Show menu   [2] >> Calculator            |')
-print('| [3] >> Counter     [4] >>                       |')
-print('|                                                 |')
-print('| [H] >> Help        [A] >> About                 |')
-print('| [C] >> Credits     [F] >> Pay respect           |')
-print('| [G] >> gReEtZ      [E] >> Exit                  |')
-print('| [?] >> ?????                                    |')
-print('|=================================================|')
-
 #Тут_функции
 
 def main_menu():
@@ -21,7 +6,7 @@ def main_menu():
     print('|=================================================|')
     print('|                                                 |')
     print('| [1] >> Show menu   [2] >> Calculator            |')
-    print('| [3] >> Counter     [4] >>                       |')
+    print('| [3] >> Counter     [4] >> Equation              |')
     print('|                                                 |')
     print('| [H] >> Help        [A] >> About                 |')
     print('| [C] >> Credits     [F] >> Pay respect           |')
@@ -123,6 +108,58 @@ def respect():
     print('|              -=[Respect!]=-                    |')
     print('|================================================|')
 
+def equation_plus():
+    print('Уравнение типа: a+b=c')
+    print('Введите a: ')
+    eq1 = input('| > ')
+    print('Введите b: ')
+    eq2 = input('| > ')
+    print('Введите c: ')
+    eq3 = input('| > ')
+    if eq1 == 'x':
+        eq2 = int(eq2)
+        eq3 = int(eq3)
+        print('Ответ:')
+        print(eq3-eq2)
+    elif eq2 == 'x':
+        eq1 = int(eq1)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq3-eq1)
+    elif eq3 == 'x':
+        eq1 = int(eq1)
+        eq2 = int(eq2)
+        print('Ответ:')
+        print(eq1+eq3)
+
+def equation_minus():
+    print('a-b=c')
+    print('Введите a: ')
+    eq1 = input('| > ')
+    print('Введите b: ')
+    eq2 = input('| > ')
+    print('Введите c: ')
+    eq3 = input('| > ')
+    if eq1 == 'x':
+        eq2 = int(eq2)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq3+eq2)
+    elif eq2 == 'x':
+        eq1 = int(eq1)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq1 - eq3)
+    elif eq3 == 'x':
+        eq1 = int(eq1)
+        eq2 = int(eq2)
+        print('Ответ: ')
+        print(eq1-eq2)
+
+#start
+#Тут начало
+
+main_menu()
 
 working = 'works'
 while working !='E':
@@ -202,6 +239,22 @@ while working !='E':
                    print(a)
                    b = int(input('| > '))
                 print(f'Ответ: {a}')
+
+    elif working == '4':
+        eq1 = 0
+        eq2 = 0
+        eq3 = 0
+        print('Выберите тип уравнения: ')
+        print('a+b=c - введите +')
+        print('a-b=c - введите -')
+        print('a*b=c - введите *')
+        print('a/b=c - введите /')
+        opr3 = input('| > ')
+        if opr3 == '+':
+            equation_plus()
+        elif opr3 == '-':
+            equation_minus()
+
 
     elif working == 'E':
         print('Fuck u!')
