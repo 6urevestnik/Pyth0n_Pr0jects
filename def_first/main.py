@@ -8,6 +8,7 @@ def main_menu():
     print('|                                                 |')
     print('| [1] >> Show menu   [2] >> Calculator            |')
     print('| [3] >> Counter     [4] >> Equation              |')
+    print('| [5] >> Comparison  [?] >> ???                   |')
     print('|                                                 |')
     print('| [H] >> Help        [A] >> About                 |')
     print('| [C] >> Credits     [F] >> Pay respect           |')
@@ -218,6 +219,25 @@ def equation_division():
         print('Ответ: ')
         print(eq1/eq2)
 
+# Сравнение двух чисел
+def comparison_two_numbers():
+    print('Введите первое число: ')
+    a = int(input('| > '))
+    print('Введите второе число: ')
+    b = int(input('| > '))
+    if a > b:
+        print(f'Большее число: {a}')
+        print(f'Меньшее меньшее: {b}')
+        print(f'Разница: {a-b}')
+    elif a < b:
+        print(f'Большее число: {b}')
+        print(f'Меньшее меньшее: {a}')
+        print(f'Разница: {b-a}')
+    elif a == b or b == a:
+        print(f' Числа равны: {a==b}')
+
+# __________________________________________________________
+
 #start
 #Тут начало
 
@@ -240,6 +260,8 @@ while working !='E':
         greetz()
     elif working == 'C':
         credits()
+    elif working == '5':
+        comparison_two_numbers()
 
     elif working == '2':
         print('| Введите знак операции')
@@ -253,7 +275,7 @@ while working !='E':
         elif opr1 == '/':
             calculator_division()
 
-# Тут счётчики
+# 3 - Счётчики
     elif working == '3':
         print('| Введите знак операции')
         opr2 = input('| > ')
@@ -301,7 +323,7 @@ while working !='E':
                    print(a)
                    b = int(input('| > '))
                 print(f'Ответ: {a}')
-
+# 4 - Уравнения
     elif working == '4':
         eq1 = 0
         eq2 = 0
