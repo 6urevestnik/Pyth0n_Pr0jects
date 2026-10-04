@@ -1,5 +1,6 @@
 #Тут_функции
 
+# Главное меню
 def main_menu():
     print('|=================================================|')
     print('|              -=[Something v.1]=-                |')
@@ -13,6 +14,7 @@ def main_menu():
     print('| [E] >> Exit        [?] >> ?                     |')
     print('|=================================================|')
 
+# Помощь
 def help():
     print('|================================================|')
     print('| > Для выбора действия введите идентификатор    |')
@@ -39,6 +41,7 @@ def help():
     print('| > [F] >> Выразите своё уважение.               |')
     print('|================================================|')
 
+# О программе
 def about():
     print('|================================================|')
     print('|               -=[USER DATA]=-                  |')
@@ -58,6 +61,7 @@ def about():
     print('| [ ] survive university                         |')
     print('|================================================|')
 
+# Передаю приветы
 def greetz():
     print('|================================================|')
     print('|                -=[gReEtZ]=-                    |')
@@ -69,6 +73,7 @@ def greetz():
     print('| >> all coders still using print()              |')
     print('|================================================|')
 
+# Выражаю благодарности
 def credits():
     print('|================================================|')
     print('|                -=[Credits]=-                   |')
@@ -79,35 +84,41 @@ def credits():
     print('| BUGS.........................also 6urevestnik  |')
     print('|================================================|')
 
+# Калькулятор - операция плюс
 def calculator_plus():
     a = int(input('| > '))
     b = int(input('| > '))
     c = a + b
     print(f'Ответ: {c}')
 
+# Калькулятор - операция минус
 def calculator_minus():
     a = int(input('| > '))
     b = int(input('| > '))
     c = a - b
     print(f'Ответ: {c}')
 
+# Калькулятор - операция умножение
 def calculator_multiplication():
     a = int(input('| > '))
     b = int(input('| > '))
     c = a * b
     print(f'Ответ: {c}')
 
+# Калькулятор - операция деление
 def calculator_division():
     a = int(input('|> '))
     b = int(input('|> '))
     c = a / b
     print(f'Ответ: {c}')
 
+# Выражаю уважение
 def respect():
     print('|================================================|')
     print('|              -=[Respect!]=-                    |')
     print('|================================================|')
 
+# Уравнения - операция плюс
 def equation_plus():
     print('Уравнение типа: a+b=c')
     print('Введите a: ')
@@ -132,8 +143,9 @@ def equation_plus():
         print('Ответ:')
         print(eq1+eq3)
 
+# Уравнения - операция минус
 def equation_minus():
-    print('a-b=c')
+    print('Уравнение типа: a-b=c')
     print('Введите a: ')
     eq1 = input('| > ')
     print('Введите b: ')
@@ -155,6 +167,56 @@ def equation_minus():
         eq2 = int(eq2)
         print('Ответ: ')
         print(eq1-eq2)
+
+# Уравнения - операция умножения
+def equation_multiplication():
+    print('Уравнение типа: a*b=c')
+    print('Введите а: ')
+    eq1 = input('| > ')
+    print('Введите b: ')
+    eq2 = input('| > ')
+    print('Введите c: ')
+    eq3 = input('| > ')
+    if eq1 == 'x':
+        eq2 = int(eq2)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq3/eq2)
+    elif eq2 == 'x':
+        eq1 = int(eq1)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq3/eq1)
+    elif eq3 == 'x':
+        eq1 = int(eq1)
+        eq2 = int(eq2)
+        print('Ответ: ')
+        print(eq1*eq2)
+
+# Уравнения - операция деления
+def equation_division():
+    print('Уравнения типа: a/b=c')
+    print('Введите a: ')
+    eq1 = input('| > ')
+    print('Введите b: ')
+    eq2 = input('| > ')
+    print('Введите c: ')
+    eq3 = input('| > ')
+    if eq1 == 'x':
+        eq2 = int(eq2)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq3*eq2)
+    elif eq2 == 'x':
+        eq1 = int(eq1)
+        eq3 = int(eq3)
+        print('Ответ: ')
+        print(eq1/eq3)
+    elif eq3 == 'x':
+        eq1 = int(eq1)
+        eq2 = int(eq2)
+        print('Ответ: ')
+        print(eq1/eq2)
 
 #start
 #Тут начало
@@ -254,7 +316,10 @@ while working !='E':
             equation_plus()
         elif opr3 == '-':
             equation_minus()
-
+        elif opr3 == '*':
+            equation_multiplication()
+        elif opr3 == '/':
+            equation_division()
 
     elif working == 'E':
         print('Fuck u!')
