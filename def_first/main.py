@@ -113,6 +113,16 @@ def calculator_division():
     c = a / b
     print(f'Ответ: {c}')
 
+# Калькулятор - операция процент от числа
+def calculator_percent():
+    print('Введите число :')
+    a = int(input('| > '))
+    print('Введите процент от числа :')
+    b = int(input('| > '))
+    c = a * b / 100
+    print(f'{b}% от числа {a} = {c}')
+
+
 # Выражаю уважение
 def respect():
     print('|================================================|')
@@ -245,7 +255,7 @@ main_menu()
 
 working = 'works'
 while working !='E':
-    print('Введите идентификатор функции')
+    print('| Введите идентификатор функции :')
     working = input('| > ')
 
     if working == 'H':
@@ -263,17 +273,28 @@ while working !='E':
     elif working == '5':
         comparison_two_numbers()
 
+# Калькулятор с выбором функции
     elif working == '2':
-        print('| Введите знак операции')
-        opr1 = input('| > ')
-        if opr1 == '+':
+        print('|================================================|')
+        print('| Дотсупные операции:                            |')
+        print('| >> Сложение (+)                                |')
+        print('| >> Вычитание (-)                               |')
+        print('| >> Умножение (*)                               |')
+        print('| >> Деление (/)                                 |')
+        print('| >> Процент от числа (%)                        |')
+        print('|================================================|')
+        print('| Введите знак операции: ')
+        operation_calculate = input('| > ')
+        if operation_calculate == '+':
             calculator_plus()
-        elif opr1 == '-':
+        elif operation_calculate == '-':
             calculator_minus()
-        elif opr1 == '*':
+        elif operation_calculate == '*':
             calculator_multiplication()
-        elif opr1 == '/':
+        elif operation_calculate == '/':
             calculator_division()
+        elif operation_calculate == '%':
+            calculator_percent()
 
 # 3 - Счётчики
     elif working == '3':
