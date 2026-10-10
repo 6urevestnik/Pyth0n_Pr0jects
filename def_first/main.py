@@ -2,99 +2,109 @@
 
 # Главное меню
 def main_menu():
-    print('|=================================================|')
-    print('|              -=[Something v.1]=-                |')
-    print('|=================================================|')
-    print('|                                                 |')
-    print('| [1] >> Show menu   [2] >> Calculator            |')
-    print('| [3] >> Counter     [4] >> Equation              |')
-    print('| [5] >> Comparison  [?] >> ???                   |')
-    print('|                                                 |')
-    print('| [H] >> Help        [A] >> About                 |')
-    print('| [C] >> Credits     [F] >> Pay respect           |')
-    print('| [E] >> Exit        [?] >> ?                     |')
-    print('|=================================================|')
+    print('|=========================================================|')
+    print('|                  -=[Something v.1]=-                    |')
+    print('|=========================================================|')
+    print('|                                                         |')
+    print('| [1] >> Show menu   [2] >> Calculator                    |')
+    print('| [3] >> Counter     [4] >> Equation                      |')
+    print('| [5] >> Comparison  [6] >> Exponentiation                |')
+    print('| [?] >> ???         [?] >> ???                           |')
+    print('|                                                         |')
+    print('| [H] >> Help        [A] >> About                         |')
+    print('| [C] >> Credits     [F] >> Pay respect                   |')
+    print('| [E] >> Exit        [?] >> ?                             |')
+    print('|                                                         |')
+    print('|=========================================================|')
+
 
 # Помощь
 def help():
-    print('|================================================|')
-    print('| > Для выбора действия введите идентификатор    |')
-    print('| из квадратных скобок.                          |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > Для выхода из программы введите [E].         |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > [1] >> Show menu - чтобы снова увидеть меню. |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > Выбрать следующие действие можно после       |')
-    print('| окончания выбранного действия.                 |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > Для решения простого примера воспользуйтесь  |')
-    print('| функцией [2] >> Calculator.                    |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > Для решения примера с накоплением ответа     |')
-    print('| воспользуйтесь счётчиком [3] >> Counter.       |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > [A] >> Abount - расскажет об авторе.         |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > [C] >> Creedz - выражение благодарности      |')
-    print('| всем кто помог написанию программы.            |')
-    print('|                -*-   -*-   -*-                 |')
-    print('| > [F] >> Выразите своё уважение.               |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('|                                                         |')
+    print('| > Для выбора действия введите идентификатор             |')
+    print('| из квадратных скобок.                                   |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > Для выхода из программы введите [E].                  |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > [1] >> Show menu - чтобы снова увидеть меню.          |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > Выбрать следующие действие можно после                |')
+    print('| окончания выбранного действия.                          |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > Для решения простого примера воспользуйтесь           |')
+    print('| функцией [2] >> Calculator.                             |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > Для решения примера с накоплением ответа              |')
+    print('| воспользуйтесь счётчиком [3] >> Counter.                |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > [A] >> Abount - расскажет об авторе.                  |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > [C] >> Creedz - выражение благодарности               |')
+    print('| всем кто помог написанию программы.                     |')
+    print('|                -*-   -*-   -*-                          |')
+    print('| > [F] >> Выразите своё уважение.                        |')
+    print('|                                                         |')
+    print('|=========================================================|')
+
 
 # О программе
 def about():
-    print('|================================================|')
-    print('|               -=[USER DATA]=-                  |')
-    print('|================================================|')
-    print('| HANDLE   : 6urevestnik                         |')
-    print('| CLASS    : Future python god                   |')
-    print('| LEVEl    : Not your level bro                  |')
-    print('|                                                |')
-    print('| CURRENT SKILLS:                                |')
-    print('| [+] creating unnecessary menus                 |')
-    print('| [+] input / print                              |')
-    print('| [+] if / elif / else                           |')
-    print('| [+] while                                      |')
-    print('| [+] def                                        |')
-    print('| [ ] world domination                           |')
-    print('| [ ] become a god                               |')
-    print('| [ ] survive university                         |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('|                    -=[USER DATA]=-                      |')
+    print('|=========================================================|')
+    print('| HANDLE   : 6urevestnik                                  |')
+    print('| CLASS    : Future python god                            |')
+    print('| LEVEl    : Not your level bro                           |')
+    print('|                                                         |')
+    print('| CURRENT SKILLS:                                         |')
+    print('| [+] creating unnecessary menus                          |')
+    print('| [+] input / print                                       |')
+    print('| [+] if / elif / else                                    |')
+    print('| [+] while                                               |')
+    print('| [+] def                                                 |')
+    print('| [ ] world domination                                    |')
+    print('| [ ] become a god                                        |')
+    print('| [ ] survive university                                  |')
+    print('|=========================================================|')
+
 
 # Передаю приветы
 def greetz():
-    print('|================================================|')
-    print('|                -=[gReEtZ]=-                    |')
-    print('|================================================|')
-    print('| gReEtZ t0:                                     |')
-    print('| >> GitHub       >> Python                      |')
-    print('| >> ChatGpt      >> PyCharm                     |')
-    print('| >> Daft Punk    >> Coffee                      |')
-    print('| >> all coders still using print()              |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('|                     -=[gReEtZ]=-                        |')
+    print('|=========================================================|')
+    print('| gReEtZ t0:                                              |')
+    print('| >> GitHub       >> Python                               |')
+    print('| >> ChatGpt      >> PyCharm                              |')
+    print('| >> Daft Punk    >> Coffee                               |')
+    print('| >> all coders still using print()                       |')
+    print('|=========================================================|')
+
 
 # Выражаю благодарности
 def credits():
-    print('|================================================|')
-    print('|                -=[Credits]=-                   |')
-    print('|================================================|')
-    print('| CODE.........................6urevestnik       |')
-    print('| DESIGN.......................6urevestnik       |')
-    print('| TESTING......................6urevestnik       |')
-    print('| BUGS.........................also 6urevestnik  |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('|                     -=[Credits]=-                       |')
+    print('|=========================================================|')
+    print('| CODE................................6urevestnik         |')
+    print('| DESIGN..............................6urevestnik         |')
+    print('| TESTING.............................6urevestnik         |')
+    print('| BUGS................................also 6urevestnik    |')
+    print('|=========================================================|')
+
 
 # Калькулятор - вводная часть
 def calculator_menu():
-    print('|================================================|')
-    print('| Дотсупные операции:                            |')
-    print('| >> Сложение (+)                                |')
-    print('| >> Вычитание (-)                               |')
-    print('| >> Умножение (*)                               |')
-    print('| >> Деление (/)                                 |')
-    print('| >> Процент от числа (%)                        |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('| Дотсупные операции:                                     |')
+    print('| [+] >> Сложение (+)                                     |')
+    print('| [-] >> Вычитание (-)                                    |')
+    print('| [*] >> Умножение (*)                                    |')
+    print('| [/] >> Деление (/)                                      |')
+    print('| [%] >> Процент от числа (%)                             |')
+    print('| [S] >> Special division                                 |')
+    print('|=========================================================|')
 
 # Калькулятор - операция плюс
 def calculator_plus():
@@ -135,11 +145,27 @@ def calculator_percent():
     c = a * b / 100
     print(f'{b}% от числа {a} = {c}')
 
+# Калькулятор - специальное деление
+def calculator_special_division():
+    print('| Введите делимое: ')
+    a = int(input('| > '))
+    print('| Введите делитель: ')
+    b = int(input('| > '))
+    c1 = a/b
+    c2 = a//b
+    c3 = a%b
+    print(c1)
+    print(type(c1))
+    print(c2)
+    print(type(c2))
+    print(c3)
+    print(type(c3))
+
 # Выражаю уважение
 def respect():
-    print('|================================================|')
-    print('|              -=[Respect!]=-                    |')
-    print('|================================================|')
+    print('|=========================================================|')
+    print('|                   -=[Respect!]=-                        |')
+    print('|=========================================================|')
 
 # Уравнения - операция плюс
 def equation_plus():
@@ -258,6 +284,33 @@ def comparison_two_numbers():
     elif a == b or b == a:
         print(f' Числа равны: {a==b}')
 
+# Возведение в степень - меню
+def exponentiation_menu():
+    print('|=========================================================|')
+    print('| Функции возведения в степень:                           |')
+    print('| [1] >> Возведение в квадрат          - a * a            |')
+    print('| [2] >> Возведение в куб              - a * a * a        |')
+    print('| [3] >> Возведение в квадрат квадрата - a * a * a * a    |')
+    print('|=========================================================|')
+
+# Возведение в степень - квадрат
+def exponentiation_square():
+    print('Введите число для возведения квадрат: ')
+    base = int(input('| > '))
+    print(f'Ответ: {base} в квадрате = {base**2}')
+
+# Возведение в степень - куб
+def exponentiation_cube():
+    print('Введите число для возведения в куб: ')
+    base = int(input('| > '))
+    print(f'Ответ: {base} в кубе {base**3}')
+
+# Возведение в степень - квадрат квадрата
+def exponentiation_squaring_square():
+    print('Введите число для возведения в четвёртую степень: ')
+    base = int(input('| > '))
+    print(f'Ответ: {base} в четвёртой степени = {base**4}')
+
 # __________________________________________________________
 
 #start - тут начало
@@ -300,6 +353,8 @@ while working !='E':
             calculator_division()
         elif operation_calculate == '%':
             calculator_percent()
+        elif operation_calculate == 'S':
+            calculator_special_division()
 
 # 3 - Счётчики
     elif working == '3':
@@ -369,6 +424,18 @@ while working !='E':
             equation_multiplication()
         elif opr3 == '/':
             equation_division()
+
+# 6 - Возведение в степень
+    elif working == '6':
+        exponentiation_menu()
+        print('| Выберите функцию: ')
+        exponentiation_operator = input('| > ')
+        if exponentiation_operator == '1':
+            exponentiation_square()
+        elif exponentiation_operator == '2':
+            exponentiation_cube()
+        elif exponentiation_operator == '3':
+            exponentiation_squaring_square()
 
     elif working == 'E':
         print('Fuck u!')
