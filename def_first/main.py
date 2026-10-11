@@ -417,7 +417,7 @@ while working !='E':
         print('a/b=c - введите /')
         opr3 = input('| > ')
         if opr3 == '+':
-            equation_plus()
+            equation_addition()
         elif opr3 == '-':
             equation_difference()
         elif opr3 == '*':
