@@ -9,7 +9,7 @@ def main_menu():
     print('| [1] >> Show menu   [2] >> Calculator                    |')
     print('| [3] >> Counter     [4] >> Equation                      |')
     print('| [5] >> Comparison  [6] >> Exponentiation                |')
-    print('| [?] >> ???         [?] >> ???                           |')
+    print('| [?] >> ???         [8] >> Middle arifmetic (average)    |')
     print('|                                                         |')
     print('| [H] >> Help        [A] >> About                         |')
     print('| [C] >> Credits     [F] >> Pay respect                   |')
@@ -246,26 +246,26 @@ def equation_multiplication():
 def equation_division():
     print('Уравнения типа: a/b=c')
     print('Введите a: ')
-    eq1 = input('| > ')
+    operand_1 = input('| > ')
     print('Введите b: ')
-    eq2 = input('| > ')
+    operand_2 = input('| > ')
     print('Введите c: ')
-    eq3 = input('| > ')
-    if eq1 == 'x':
-        eq2 = int(eq2)
-        eq3 = int(eq3)
+    operand_3 = input('| > ')
+    if operand_1 == 'x':
+        operand_2 = int(operand_2)
+        operand_3 = int(operand_3)
         print('Ответ: ')
-        print(eq3*eq2)
-    elif eq2 == 'x':
-        eq1 = int(eq1)
-        eq3 = int(eq3)
+        print(operand_3 * operand_2)
+    elif operand_2 == 'x':
+        operand_1 = int(operand_1)
+        operand_3 = int(operand_3)
         print('Ответ: ')
-        print(eq1/eq3)
-    elif eq3 == 'x':
-        eq1 = int(eq1)
-        eq2 = int(eq2)
+        print(operand_1/operand_3)
+    elif operand_3 == 'x':
+        operand_1 = int(operand_1)
+        operand_2 = int(operand_2)
         print('Ответ: ')
-        print(eq1/eq2)
+        print(operand_1/operand_2)
 
 # Сравнение двух чисел
 def comparison_two_numbers():
