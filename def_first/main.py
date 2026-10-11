@@ -168,29 +168,29 @@ def respect():
     print('|=========================================================|')
 
 # Уравнения - операция плюс
-def equation_plus():
+def equation_addition():
     print('Уравнение типа: a+b=c')
     print('Введите a: ')
-    eq1 = input('| > ')
+    operand_1 = input('| > ')
     print('Введите b: ')
-    eq2 = input('| > ')
+    operand_2 = input('| > ')
     print('Введите c: ')
-    eq3 = input('| > ')
-    if eq1 == 'x':
-        eq2 = int(eq2)
-        eq3 = int(eq3)
+    operand_3 = input('| > ')
+    if operand_1 == 'x':
+        operand_2 = int(operand_2)
+        operand_3 = int(operand_3)
         print('Ответ:')
-        print(eq3-eq2)
-    elif eq2 == 'x':
-        eq1 = int(eq1)
-        eq3 = int(eq3)
+        print(operand_3 - operand_2)
+    elif operand_2 == 'x':
+        operand_1 = int(operand_1)
+        operand_3 = int(operand_3)
         print('Ответ: ')
-        print(eq3-eq1)
-    elif eq3 == 'x':
-        eq1 = int(eq1)
-        eq2 = int(eq2)
+        print(operand_3 - operand_1)
+    elif operand_3 == 'x':
+        operand_1 = int(operand_1)
+        opernad_2 = int(operand_2)
         print('Ответ:')
-        print(eq1+eq3)
+        print(operand_1 + operand_3)
 
 # Уравнения - операция минус
 def equation_difference():
@@ -407,9 +407,9 @@ while working !='E':
 
 # 4 - Уравнения
     elif working == '4':
-        eq1 = 0
-        eq2 = 0
-        eq3 = 0
+        operand_1 = 0
+        operand_2 = 0
+        operand_3 = 0
         print('Выберите тип уравнения: ')
         print('a+b=c - введите +')
         print('a-b=c - введите -')
