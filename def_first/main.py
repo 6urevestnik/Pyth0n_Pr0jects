@@ -193,31 +193,31 @@ def equation_plus():
         print(eq1+eq3)
 
 # Уравнения - операция минус
-def equation_minus():
+def equation_difference():
     print('Уравнение типа: a-b=c')
     print('Введите a: ')
-    eq1 = input('| > ')
+    operand_1 = input('| > ')
     print('Введите b: ')
-    eq2 = input('| > ')
+    operand_2 = input('| > ')
     print('Введите c: ')
-    eq3 = input('| > ')
-    if eq1 == 'x':
-        eq2 = int(eq2)
-        eq3 = int(eq3)
+    operand_3 = input('| > ')
+    if operand_1 == 'x':
+        operand_2 = int(operand_2)
+        operand_3 = int(operand_3)
         print('Ответ: ')
-        print(eq3+eq2)
-    elif eq2 == 'x':
-        eq1 = int(eq1)
-        eq3 = int(eq3)
+        print(operand_3 + operand_2)
+    elif operand_2 == 'x':
+        operand_1 = int(operand_1)
+        operand_3 = int(operand_3)
         print('Ответ: ')
-        print(eq1 - eq3)
+        print(operand_1 - operand_3)
     elif eq3 == 'x':
-        eq1 = int(eq1)
-        eq2 = int(eq2)
+        operand_1 = int(operand_1)
+        operand_2 = int(operand_2)
         print('Ответ: ')
-        print(eq1-eq2)
+        print(operand_1 - operand_2)
 
-# Уравнения - операция умножения
+# Уравнения - операция умножение
 def equation_multiplication():
     print('Уравнение типа: a*b=c')
     print('Введите а: ')
@@ -242,7 +242,7 @@ def equation_multiplication():
         print('Ответ: ')
         print(operand_1 * operand_2)
 
-# Уравнения - операция деления
+# Уравнения - операция деление
 def equation_division():
     print('Уравнения типа: a/b=c')
     print('Введите a: ')
