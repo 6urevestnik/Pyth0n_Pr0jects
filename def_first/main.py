@@ -419,7 +419,7 @@ while working !='E':
         if opr3 == '+':
             equation_plus()
         elif opr3 == '-':
-            equation_minus()
+            equation_difference()
         elif opr3 == '*':
             equation_multiplication()
         elif opr3 == '/':
