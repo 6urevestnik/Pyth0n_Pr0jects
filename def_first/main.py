@@ -9,7 +9,7 @@ def main_menu():
     print('| [1] >> Show menu   [2] >> Calculator                    |')
     print('| [3] >> Counter     [4] >> Equation                      |')
     print('| [5] >> Comparison  [6] >> Exponentiation                |')
-    print('| [?] >> ???         [8] >> Middle arifmetic (average)    |')
+    print('| [?] >>             [8] >> Middle arifmetic (average)    |')
     print('|                                                         |')
     print('| [H] >> Help        [A] >> About                         |')
     print('| [C] >> Credits     [F] >> Pay respect                   |')
@@ -311,6 +311,48 @@ def exponentiation_squaring_square():
     base = int(input('| > '))
     print(f'Ответ: {base} в четвёртой степени = {base**4}')
 
+# Поиск среднего арифметического
+def arithmetic_mean():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+        if will_repeat == 'Y':
+
+            numbers = []
+            print('|====================================================|')
+            print('| Введите число. Нажмите Enter для завершения ввода. |')
+            print('|====================================================|')
+
+            for num in range(20):
+                num = input('| > ')
+
+                if num == '':
+                    break
+
+                numbers.append(int(num))
+
+            print('|====================================================|')
+            print(f'| {numbers}')
+            array_length = len(numbers)
+            print(f'| Количество элементов: {array_length}')
+            array_sum = sum(numbers)
+            print(f'| Сумма элементов: {array_sum}')
+
+            if array_length > 0:
+                mid_arifmetic = array_sum / array_length
+                mid_arifmetic = int(mid_arifmetic)
+                print(f'| Среднее арифметическое = {mid_arifmetic} |')
+            else:
+                print('Список пуст! Поробуй ещё раз!')
+
+            print('|====================================================|')
+            print('| Повторим?                                          |')
+            print('| Введи Y - для повтора, N - для пропуска            |')
+            print('|====================================================|')
+            will_repeat = input('| > ')
+
+        elif will_repeat == 'N':
+            break
+
 # __________________________________________________________
 
 #start - тут начало
@@ -436,6 +478,10 @@ while working !='E':
             exponentiation_cube()
         elif exponentiation_operator == '3':
             exponentiation_squaring_square()
+
+# 8 - Поиск среднего арифметического
+    elif working == '8':
+        arithmetic_mean()
 
     elif working == 'E':
         print('Fuck u!')
