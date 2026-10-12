@@ -6,14 +6,15 @@ def main_menu():
     print('|                  -=[Something v.1]=-                    |')
     print('|=========================================================|')
     print('|                                                         |')
-    print('| [1] >> Show menu   [2] >> Calculator                    |')
-    print('| [3] >> Counter     [4] >> Equation                      |')
-    print('| [5] >> Comparison  [6] >> Exponentiation                |')
-    print('| [?] >>             [8] >> Middle arifmetic (average)    |')
+    print('| [1] >> Show menu    [2] >> Calculator                   |')
+    print('| [3] >> Counter      [4] >> Equation                     |')
+    print('| [5] >> Comparison   [6] >> Exponentiation               |')
+    print('| [7] >> Even or not  [8] >> Middle arifmetic (average)   |')
+    print('| [?] >> ???          [?] >> ???                          |')
     print('|                                                         |')
-    print('| [H] >> Help        [A] >> About                         |')
-    print('| [C] >> Credits     [F] >> Pay respect                   |')
-    print('| [E] >> Exit        [?] >> ?                             |')
+    print('| [H] >> Help         [A] >> About                        |')
+    print('| [C] >> Credits      [F] >> Pay respect                  |')
+    print('| [E] >> Exit         [?] >> ?                            |')
     print('|                                                         |')
     print('|=========================================================|')
 
@@ -22,8 +23,8 @@ def main_menu():
 def help():
     print('|=========================================================|')
     print('|                                                         |')
-    print('| > Для выбора действия введите идентификатор             |')
-    print('| из квадратных скобок.                                   |')
+    print('| > Для выбора действия введите идентификатор из          |')
+    print('| квадратных скобок.                                      |')
     print('|                -*-   -*-   -*-                          |')
     print('| > Для выхода из программы введите [E].                  |')
     print('|                -*-   -*-   -*-                          |')
@@ -31,12 +32,6 @@ def help():
     print('|                -*-   -*-   -*-                          |')
     print('| > Выбрать следующие действие можно после                |')
     print('| окончания выбранного действия.                          |')
-    print('|                -*-   -*-   -*-                          |')
-    print('| > Для решения простого примера воспользуйтесь           |')
-    print('| функцией [2] >> Calculator.                             |')
-    print('|                -*-   -*-   -*-                          |')
-    print('| > Для решения примера с накоплением ответа              |')
-    print('| воспользуйтесь счётчиком [3] >> Counter.                |')
     print('|                -*-   -*-   -*-                          |')
     print('| > [A] >> Abount - расскажет об авторе.                  |')
     print('|                -*-   -*-   -*-                          |')
@@ -72,7 +67,7 @@ def about():
 # Передаю приветы
 def greetz():
     print('|=========================================================|')
-    print('|                     -=[gReEtZ]=-                        |')
+    print('|                    -=[gReEtZ]=-                         |')
     print('|=========================================================|')
     print('| gReEtZ t0:                                              |')
     print('| >> GitHub       >> Python                               |')
@@ -85,7 +80,7 @@ def greetz():
 # Выражаю благодарности
 def credits():
     print('|=========================================================|')
-    print('|                     -=[Credits]=-                       |')
+    print('|                    -=[Credits]=-                        |')
     print('|=========================================================|')
     print('| CODE................................6urevestnik         |')
     print('| DESIGN..............................6urevestnik         |')
@@ -108,6 +103,7 @@ def calculator_menu():
 
 # Калькулятор - операция плюс
 def calculator_plus():
+    print('Введите числа которые нужно сложить: ')
     a = int(input('| > '))
     b = int(input('| > '))
     c = a + b
@@ -115,6 +111,7 @@ def calculator_plus():
 
 # Калькулятор - операция минус
 def calculator_minus():
+    print('Введите числа которые нужно отнять: ')
     a = int(input('| > '))
     b = int(input('| > '))
     c = a - b
@@ -131,6 +128,7 @@ def calculator_multiplication():
 
 # Калькулятор - операция деление
 def calculator_division():
+    print('Введите числа которые нужно разделить: ')
     a = int(input('|> '))
     b = int(input('|> '))
     c = a / b
@@ -311,7 +309,26 @@ def exponentiation_squaring_square():
     base = int(input('| > '))
     print(f'Ответ: {base} в четвёртой степени = {base**4}')
 
-# Поиск среднего арифметического
+# [7] - Чётное или нет
+def even_or_not():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+
+        print('Введите число для проверки на чётность: ')
+        even_check = int(input('| > '))
+        even_check_1 = even_check % 2
+        if even_check_1 == 0:
+            print(f'Число {even_check} чётное')
+        else:
+            print(f'Число {even_check} не чётное')
+
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ')
+
+# [8] - Поиск среднего арифметического
 def arithmetic_mean():
     will_repeat = 'Y'
     while will_repeat == 'Y':
@@ -380,7 +397,7 @@ while working !='E':
     elif working == '5':
         comparison_two_numbers()
 
-# Калькулятор с выбором функции
+# [2] - Калькулятор с выбором функции
     elif working == '2':
         calculator_menu()
         print('| Введите знак операции: ')
@@ -398,7 +415,7 @@ while working !='E':
         elif operation_calculate == 'S':
             calculator_special_division()
 
-# 3 - Счётчики
+# [3] - Счётчики
     elif working == '3':
         print('| Введите знак операции')
         opr2 = input('| > ')
@@ -447,7 +464,7 @@ while working !='E':
                    b = int(input('| > '))
                 print(f'Ответ: {a}')
 
-# 4 - Уравнения
+# [4] - Уравнения
     elif working == '4':
         operand_1 = 0
         operand_2 = 0
@@ -467,7 +484,7 @@ while working !='E':
         elif opr3 == '/':
             equation_division()
 
-# 6 - Возведение в степень
+# [6] - Возведение в степень
     elif working == '6':
         exponentiation_menu()
         print('| Выберите функцию: ')
@@ -479,7 +496,11 @@ while working !='E':
         elif exponentiation_operator == '3':
             exponentiation_squaring_square()
 
-# 8 - Поиск среднего арифметического
+# [7] - Чётное или нечётное
+    elif working == '7':
+        even_or_not()
+
+# [8] - Поиск среднего арифметического
     elif working == '8':
         arithmetic_mean()
 
