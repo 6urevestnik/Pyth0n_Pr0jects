@@ -17,7 +17,7 @@ def main_menu():
     print('| [E] >> Exit         [?] >> ?                            |')
     print('|                                                         |')
     print('|=========================================================|')
-
+# Сделать возможность вызвать меню на русском языке
 
 # Помощь
 def help():
@@ -88,8 +88,8 @@ def credits():
     print('| BUGS................................also 6urevestnik    |')
     print('|=========================================================|')
 
-
-# Калькулятор - вводная часть
+#_______________________________________________________________________
+# [2] Калькулятор - вводная часть
 def calculator_menu():
     print('|=========================================================|')
     print('| Дотсупные операции:                                     |')
@@ -131,8 +131,12 @@ def calculator_division():
     print('Введите числа которые нужно разделить: ')
     a = int(input('|> '))
     b = int(input('|> '))
-    c = a / b
-    print(f'Ответ: {c}')
+
+    if b == 0:
+        print('Ошибка! На 0 делить нельзя! Попробуй ещё раз.')
+    else:
+        c = a / b
+        print(f'Ответ: {c}')
 
 # Калькулятор - операция процент от числа
 def calculator_percent():
@@ -149,15 +153,20 @@ def calculator_special_division():
     a = int(input('| > '))
     print('| Введите делитель: ')
     b = int(input('| > '))
-    c1 = a/b
-    c2 = a//b
-    c3 = a%b
-    print(c1)
-    print(type(c1))
-    print(c2)
-    print(type(c2))
-    print(c3)
-    print(type(c3))
+    if b == 0:
+        print('Ошибка! На 0 делить нельзя! Попробуй ещё раз.')
+    else:
+        c1 = a/b
+        c2 = a//b
+        c3 = a%b
+        print(c1)
+        print(type(c1))
+        print(c2)
+        print(type(c2))
+        print(c3)
+        print(type(c3))
+# _______________________________________________________________________
+
 
 # Выражаю уважение
 def respect():
@@ -332,43 +341,39 @@ def even_or_not():
 def arithmetic_mean():
     will_repeat = 'Y'
     while will_repeat == 'Y':
-        if will_repeat == 'Y':
 
-            numbers = []
-            print('|====================================================|')
-            print('| Введите число. Нажмите Enter для завершения ввода. |')
-            print('|====================================================|')
+        numbers = []
+        print('|====================================================|')
+        print('| Введите число. Нажмите Enter для завершения ввода. |')
+        print('|====================================================|')
 
-            for num in range(20):
-                num = input('| > ')
+        for num in range(20):
+            num = input('| > ')
 
-                if num == '':
-                    break
+            if num == '':
+                break
 
-                numbers.append(int(num))
+            numbers.append(int(num))
 
-            print('|====================================================|')
-            print(f'| {numbers}')
-            array_length = len(numbers)
-            print(f'| Количество элементов: {array_length}')
-            array_sum = sum(numbers)
-            print(f'| Сумма элементов: {array_sum}')
+        print('|====================================================|')
+        print(f'| {numbers}')
+        array_length = len(numbers)
+        print(f'| Количество элементов: {array_length}')
+        array_sum = sum(numbers)
+        print(f'| Сумма элементов: {array_sum}')
 
-            if array_length > 0:
-                mid_arifmetic = array_sum / array_length
-                mid_arifmetic = int(mid_arifmetic)
-                print(f'| Среднее арифметическое = {mid_arifmetic} |')
-            else:
-                print('Список пуст! Поробуй ещё раз!')
+        if array_length > 0:
+            mid_arifmetic = array_sum / array_length
+            mid_arifmetic = int(mid_arifmetic)
+            print(f'| Среднее арифметическое = {mid_arifmetic} |')
+        else:
+            print('Список пуст! Поробуй ещё раз!')
 
-            print('|====================================================|')
-            print('| Повторим?                                          |')
-            print('| Введи Y - для повтора, N - для пропуска            |')
-            print('|====================================================|')
-            will_repeat = input('| > ')
-
-        elif will_repeat == 'N':
-            break
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ')
 
 # __________________________________________________________
 
