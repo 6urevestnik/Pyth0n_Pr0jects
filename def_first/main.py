@@ -512,5 +512,8 @@ while working !='E':
     elif working == '8':
         arithmetic_mean()
 
+    elif working == '00':
+        print('T3ST_Z0n3')
+
     elif working == 'E':
         print('Fuck u!')
