@@ -356,19 +356,22 @@ def arithmetic_mean():
             numbers.append(int(num))
 
         print('|====================================================|')
-        print(f'| {numbers}')
-        array_length = len(numbers)
-        print(f'| Количество элементов: {array_length}')
-        array_sum = sum(numbers)
-        print(f'| Сумма элементов: {array_sum}')
+        print(numbers)
+        print('')
+        print('Количество элементов:')
+        print(len(numbers))
+        print('')
+        print('Сумма элементов:')
+        print(sum(numbers))
+        print('')
 
-        if array_length > 0:
-            mid_arifmetic = array_sum / array_length
-            mid_arifmetic = int(mid_arifmetic)
-            print(f'| Среднее арифметическое = {mid_arifmetic} |')
+        if len(numbers) > 0:
+            print('Среднее арифметическое:')
+            print(sum(numbers)/len(numbers))
         else:
             print('Список пуст! Поробуй ещё раз!')
 
+        print('')
         print('|====================================================|')
         print('| Повторим?                                          |')
         print('| Введи Y - для повтора, N - для пропуска            |')
