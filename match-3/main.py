@@ -7,6 +7,21 @@ def show_all():
     print(arr_2)
     print(arr_3)
 
+def vertical_check():
+    for i in range(12):
+        if arr_1[i] == arr_2[i] == arr_3[i]:
+            print('Успех! Три в ряд!')
+            print(arr_1[i], arr_2[i], arr_3[i])
+        else:
+            print('Проверяю дальше...')
+
+def horizontal_check():
+    print('in progress...')
+
+def start_menu():
+    print('in progress...')
+#===========================================================================================
+
 index = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
 arr_1 = ['b', 'a', 'a', 'a', 'd', 'b', 'c', 'd', 'a', 'b', 'c', 'D']
 arr_2 = ['d', 'c', 'b', 'a', 'd', 'c', 'b', 'a', 'd', 'c', 'b', 'A']
@@ -16,40 +31,18 @@ print('|==========================================================|')
 print('')
 
 # Создаю горизонтальную проверку три-в-ряд в трех массивах
-print('')
-print('|==========================================================|')
-for i in range(10):
-    print(arr_1[i], arr_1[i+1], arr_1[i+2])
-    print(arr_2[i], arr_2[i+1], arr_2[i+2])
-    print(arr_3[i], arr_3[i+1], arr_3[i+2])
-    print('')
-print('|==========================================================|')
-
-for i in range(10):
-    print(arr_1[i], arr_1[i+1], arr_1[i+2])
-    print('')
-print('|==========================================================|')
-
-for i in range(10):
-    print(arr_2[i], arr_2[i+1], arr_2[i+2])
-    print('')
-print('|==========================================================|')
-
-for i in range(10):
-    print(arr_3[i], arr_3[i+1], arr_3[i+2])
-    print('')
-print('|==========================================================|')
-
-
 
 for i in range(10):
     if arr_1[i] == 'a' and arr_1[i+1] == 'a' and arr_1[i+2] == 'a':
-        print(arr_1[i])
-        print(arr_1[i+1])
-        print(arr_1[i+2])
+        print(arr_1[i], arr_1[i+1], arr_1[i+2])
         print('Три в ряд! Успех')
-    else:
-        print('Проверяю дальше...')
+        print(arr_1.index(arr_1[i]), arr_1.index(arr_1[i+1]), arr_1.index(arr_1[i+2]))
+
+
+print('|==========================================================|')
+print('|==========================================================|')
+print('|==========================================================|')
+
 
 print('')
 for i in range(10):
@@ -71,10 +64,6 @@ for i in range(10):
     else:
         print('Проверяю дальше...')
 
-print('')
-print('|======================|')
-print('|   please stand by    |')
-print('|======================|')
 
 # Создаю вертикальную проверку три-в-ряд в трех массивах
 
@@ -85,21 +74,27 @@ for i in range(12):
     else:
         print('Проверяю дальше')
     i += 1
+print('|======================================================|')
 
-def vertical_check():
-    print('in progress...')
-    for i in range(12):
-        if arr_1[i] == arr_2[i] == arr_3[i]:
-            print('Успех! Три в ряд!')
-            print(arr_1[i], arr_2[i], arr_3[i])
-        else:
-            print('Проверяю дальше...')
 
-def horizontal_check():
-    print('in progress...')
+arr_4 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+for i in range(9):
+    print(arr_4[i])
+    print(arr_4.index(arr_4[i]))
+print('')
+print('|======================================================|')
 
-def start_menu():
-    print('in progress...')
+for i in range(8):
+    print('|---|---|---|')
+    print('|', arr_4[i], '|', arr_4[i+1], '|', arr_4[i+2], '|')
+    print('|---|---|---|')
+    print('|', arr_4.index(arr_4[i]), '|', arr_4.index(arr_4[i+1]), '|', arr_4.index(arr_4[i+2]), '|')
+    print('|---|---|---|')
+    print('')
 
+print('|======================================================|')
+
+print('')
 print('|======================|')
-vertical_check()
+print('|   please stand by    |')
+print('|======================|')
