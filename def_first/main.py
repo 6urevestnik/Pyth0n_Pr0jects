@@ -600,7 +600,7 @@ def clever_comparison_four_numbers():
 
 #_______________________________________________________________________________________________________________________
 
-# Возведение в степень - меню
+# [6] >> Возведение в степень - меню
 def exponentiation_menu():
     print('|=========================================================|')
     print('| Функции возведения в степень:                           |')
@@ -609,23 +609,44 @@ def exponentiation_menu():
     print('| [3] >> Возведение в квадрат квадрата - a * a * a * a    |')
     print('|=========================================================|')
 
-# Возведение в степень - квадрат
+# [6] >> Возведение в степень - меню выбора
+def exponentiation_selection_menu():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+
+        exponentiation_menu()
+        print('Введите номер операции: ')
+        exponentiation_selection = input('| > ')
+
+        if exponentiation_selection == '1':
+            exponentiation_square()
+        elif exponentiation_selection == '2':
+            exponentiation_cube()
+        elif exponentiation_selection == '3':
+            exponentiation_squaring_square()
+
+        print('Повторяем? Y/N')
+        will_repeat = input('| > ')
+
+# [6] >> Возведение в степень - квадрат
 def exponentiation_square():
     print('Введите число для возведения квадрат: ')
     base = int(input('| > '))
     print(f'Ответ: {base} в квадрате = {base**2}')
 
-# Возведение в степень - куб
+# [6] >> Возведение в степень - куб
 def exponentiation_cube():
     print('Введите число для возведения в куб: ')
     base = int(input('| > '))
     print(f'Ответ: {base} в кубе {base**3}')
 
-# Возведение в степень - квадрат квадрата
+# [6] >> Возведение в степень - квадрат квадрата
 def exponentiation_squaring_square():
     print('Введите число для возведения в четвёртую степень: ')
     base = int(input('| > '))
     print(f'Ответ: {base} в четвёртой степени = {base**4}')
+
+#_______________________________________________________________________________________________________________________
 
 # [7] - Чётное или нет
 def even_or_not():
@@ -781,15 +802,7 @@ while working !='E':
 
 # [6] - Возведение в степень
     elif working == '6':
-        exponentiation_menu()
-        print('| Выберите функцию: ')
-        exponentiation_operator = input('| > ')
-        if exponentiation_operator == '1':
-            exponentiation_square()
-        elif exponentiation_operator == '2':
-            exponentiation_cube()
-        elif exponentiation_operator == '3':
-            exponentiation_squaring_square()
+        exponentiation_selection_menu()
 
 # [7] - Чётное или нечётное
     elif working == '7':
