@@ -125,7 +125,7 @@ def calculator_selection_def():
         elif calculator_selection == '6':
             calculator_special_division()
 
-        print('Повторяем?')
+        print('Повторяем? Y/N')
         will_repeat = input('| > ')
 
 # [2] >> Калькулятор - сложение
@@ -203,107 +203,172 @@ def respect():
     print('|                   -=[Respect!]=-                        |')
     print('|=========================================================|')
 
-# Уравнения - операция плюс
+# _______________________________________________________________________
+
+# [4] >> Уравнения - меню
+def equation_menu():
+    print('|=========================================================|')
+    print('| [1] >> Сложение     a + b = c                           |')
+    print('| [2] >> Вычитание    a - b = c                           |')
+    print('| [3] >> Умножение    a * b = c                           |')
+    print('| [4] >> Деление      a / b = c                           |')
+    print('|=========================================================|')
+
+# [4] >> Уравнения - меню выбор
+def equation_selection_def():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+
+        equation_menu()
+        print('Введите номер операции: ')
+        equation_selection = input('| > ')
+
+        if equation_selection == '1':
+            equation_addition()
+        elif equation_selection == '2':
+            equation_subtraction()
+        elif equation_selection == '3':
+            equation_multiplication()
+        elif equation_selection == '4':
+            equation_division()
+
+        print('Повторяем? Y/N')
+        will_repeat = input('| > ')
+
+# [4] >> Уравнения - сложение
 def equation_addition():
+    a = 0
+    b = 0
+    c = 0
+
     print('Уравнение типа: a+b=c')
     print('Введите a: ')
-    operand_1 = input('| > ')
+    a = input('| > ')
     print('Введите b: ')
-    operand_2 = input('| > ')
+    b = input('| > ')
     print('Введите c: ')
-    operand_3 = input('| > ')
-    if operand_1 == 'x':
-        operand_2 = int(operand_2)
-        operand_3 = int(operand_3)
+    c = input('| > ')
+    if a == 'x':
+        b = int(b)
+        c = int(c)
         print('Ответ:')
-        print(operand_3 - operand_2)
-    elif operand_2 == 'x':
-        operand_1 = int(operand_1)
-        operand_3 = int(operand_3)
+        print(c - b)
+    elif b == 'x':
+        a = int(a)
+        c = int(c)
         print('Ответ: ')
-        print(operand_3 - operand_1)
-    elif operand_3 == 'x':
-        operand_1 = int(operand_1)
-        operand_2 = int(operand_2)
+        print(c - a)
+    elif c == 'x':
+        a = int(a)
+        b = int(b)
         print('Ответ:')
-        print(operand_1 + operand_3)
+        print(a + b)
 
-# Уравнения - операция минус
-def equation_difference():
+# [4] >> Уравнения - разность
+def equation_subtraction():
+    a = 0
+    b = 0
+    c = 0
+
     print('Уравнение типа: a-b=c')
     print('Введите a: ')
-    operand_1 = input('| > ')
+    a = input('| > ')
     print('Введите b: ')
-    operand_2 = input('| > ')
+    b = input('| > ')
     print('Введите c: ')
-    operand_3 = input('| > ')
-    if operand_1 == 'x':
-        operand_2 = int(operand_2)
-        operand_3 = int(operand_3)
+    c = input('| > ')
+    if a == 'x':
+        b = int(b)
+        c = int(c)
         print('Ответ: ')
-        print(operand_3 + operand_2)
-    elif operand_2 == 'x':
-        operand_1 = int(operand_1)
-        operand_3 = int(operand_3)
+        print(c + b)
+    elif b == 'x':
+        a = int(a)
+        c = int(c)
         print('Ответ: ')
-        print(operand_1 - operand_3)
-    elif operand_3 == 'x':
-        operand_1 = int(operand_1)
-        operand_2 = int(operand_2)
+        print(a - c)
+    elif c == 'x':
+        a = int(a)
+        b = int(b)
         print('Ответ: ')
-        print(operand_1 - operand_2)
+        print(a - b)
 
-# Уравнения - операция умножение
+# [4] >> Уравнения - умножение
 def equation_multiplication():
+    a = 0
+    b = 0
+    c = 0
+
     print('Уравнение типа: a*b=c')
     print('Введите а: ')
-    operand_1 = input('| > ')
+    a = input('| > ')
     print('Введите b: ')
-    operand_2 = input('| > ')
+    b = input('| > ')
     print('Введите c: ')
-    operand_3 = input('| > ')
-    if operand_1 == 'x':
-        operand_2 = int(operand_2)
-        operand_3 = int(operand_3)
-        print('Ответ: ')
-        print(operand_3 / operand_2)
-    elif operand_2 == 'x':
-        operand_1 = int(operand_1)
-        operand_3 = int(operand_3)
-        print('Ответ: ')
-        print(operand_3 / operand_1)
-    elif operand_3 == 'x':
-        operand_1 = int(operand_1)
-        operand_2 = int(operand_2)
-        print('Ответ: ')
-        print(operand_1 * operand_2)
+    c = input('| > ')
+    if a == 'x':
+        b = int(b)
+        c = int(c)
+        if b != 0:
+            print('Ответ: ')
+            print(c / b)
+        else:
+            print('Ошибка! На ноль делить нельзя!')
 
-# Уравнения - операция деление
+    elif b == 'x':
+        a = int(a)
+        c = int(c)
+        if a != 0:
+            print('Ответ: ')
+            print(c / a)
+        else:
+            print('Ошибка! На ноль делить нельзя!')
+
+    elif c == 'x':
+        a = int(a)
+        b = int(b)
+        print('Ответ: ')
+        print(a * b)
+
+# [4] >> Уравнения - деление
 def equation_division():
+    a = 0
+    b = 0
+    c = 0
+
     print('Уравнения типа: a/b=c')
     print('Введите a: ')
-    operand_1 = input('| > ')
+    a = input('| > ')
     print('Введите b: ')
-    operand_2 = input('| > ')
+    b = input('| > ')
     print('Введите c: ')
-    operand_3 = input('| > ')
-    if operand_1 == 'x':
-        operand_2 = int(operand_2)
-        operand_3 = int(operand_3)
+    c = input('| > ')
+    if a == 'x':
+        b = int(b)
+        c = int(c)
         print('Ответ: ')
-        print(operand_3 * operand_2)
-    elif operand_2 == 'x':
-        operand_1 = int(operand_1)
-        operand_3 = int(operand_3)
-        print('Ответ: ')
-        print(operand_1 / operand_3)
-    elif operand_3 == 'x':
-        operand_1 = int(operand_1)
-        operand_2 = int(operand_2)
-        print('Ответ: ')
-        print(operand_1 / operand_2)
+        print(c * b)
+    elif b == 'x':
+        a = int(a)
+        c = int(c)
+        if c != 0:
+            print('Ответ: ')
+            print(a / c)
+        else:
+            print('Ошибка! На ноль делить нельзя!')
 
-# Сравнение двух чисел
+    elif c == 'x':
+        a = int(a)
+        b = int(b)
+        if b != 0:
+            print('Ответ: ')
+            print(a / b)
+        else:
+            print('Ошибка! На ноль делить нельзя!')
+
+# _______________________________________________________________________
+
+# [5] >> Сравнение двух чисел
 def comparison_two_numbers():
     print('Введите первое число: ')
     a = int(input('| > '))
@@ -319,6 +384,8 @@ def comparison_two_numbers():
         print(f'Разница: {b-a}')
     elif a == b or b == a:
         print(f' Числа равны: {a==b}')
+
+# _______________________________________________________________________
 
 # Возведение в степень - меню
 def exponentiation_menu():
@@ -407,7 +474,9 @@ def arithmetic_mean():
         print('|====================================================|')
         will_repeat = input('| > ')
 
-# __________________________________________________________
+# _____________________________________________________________________________________________________________________
+# _____________________________________________________________________________________________________________________
+# _____________________________________________________________________________________________________________________
 
 #start - тут начало
 
@@ -437,22 +506,6 @@ while working !='E':
 # [2] - Калькулятор с выбором функции
     elif working == '2':
         calculator_selection_def()
-
-        # ------ Меняю
-        # print('| Введите знак операции: ')
-        # operation_calculate = input('| > ')
-        # if operation_calculate == '+':
-        #     calculator_plus()
-        # elif operation_calculate == '-':
-        #     calculator_minus()
-        # elif operation_calculate == '*':
-        #     calculator_multiplication()
-        # elif operation_calculate == '/':
-        #     calculator_division()
-        # elif operation_calculate == '%':
-        #     calculator_percent()
-        # elif operation_calculate == 'S':
-        #     calculator_special_division()
 
 # [3] - Счётчики
     elif working == '3':
@@ -503,25 +556,11 @@ while working !='E':
                    b = int(input('| > '))
                 print(f'Ответ: {a}')
 
-# [4] - Уравнения
+    # _____________________________________________________________________________________________________________________
+# МЕНЯЮ!
+    # [4] - Уравнения
     elif working == '4':
-        operand_1 = 0
-        operand_2 = 0
-        operand_3 = 0
-        print('Выберите тип уравнения: ')
-        print('a+b=c - введите +')
-        print('a-b=c - введите -')
-        print('a*b=c - введите *')
-        print('a/b=c - введите /')
-        opr3 = input('| > ')
-        if opr3 == '+':
-            equation_addition()
-        elif opr3 == '-':
-            equation_difference()
-        elif opr3 == '*':
-            equation_multiplication()
-        elif opr3 == '/':
-            equation_division()
+        equation_selection_def()
 
 # [6] - Возведение в степень
     elif working == '6':
