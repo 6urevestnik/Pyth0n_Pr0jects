@@ -5,6 +5,7 @@ def main_menu():
     print('|=========================================================|')
     print('|                  -=[Something v.1]=-                    |')
     print('|=========================================================|')
+    print('|                    | [Main menu] |                      |')
     print('|                                                         |')
     print('| [1] >> Show menu    [2] >> Calculator                   |')
     print('| [3] >> Counter      [4] >> Equation                     |')
@@ -130,6 +131,7 @@ def calculator_selection_menu():
 
 # [2] >> Калькулятор - сложение
 def calculator_addition():
+    print('Операция типа: a + b = c')
     print('Введите числа которые нужно сложить: ')
     a = int(input('| > '))
     b = int(input('| > '))
@@ -138,6 +140,7 @@ def calculator_addition():
 
 # [2] >> Калькулятор - вычитание
 def calculator_subtraction():
+    print('Операция типа: a - b = c')
     print('Введите числа которые нужно отнять: ')
     a = int(input('| > '))
     b = int(input('| > '))
@@ -146,6 +149,7 @@ def calculator_subtraction():
 
 # [2] >> Калькулятор - умножение
 def calculator_multiplication():
+    print('Операция типа: a * b = c')
     print('Первый множитель: ')
     a = int(input('| > '))
     print('Второй множитель: ')
@@ -155,6 +159,7 @@ def calculator_multiplication():
 
 # [2] >> Калькулятор -  деление
 def calculator_division():
+    print('Операция типа: a / b = c')
     print('Введите числа которые нужно разделить: ')
     a = int(input('|> '))
     b = int(input('|> '))
@@ -166,6 +171,7 @@ def calculator_division():
 
 # [2] >> Калькулятор -  процент от числа
 def calculator_percent():
+    print('Операция типа: a * b / 100 = c')
     print('Введите число :')
     a = int(input('| > '))
     print('Введите процент от числа :')
@@ -241,7 +247,7 @@ def equation_addition():
     b = 0
     c = 0
 
-    print('Уравнение типа: a+b=c')
+    print('Уравнение типа: a + b = c')
     print('Введите a: ')
     a = input('| > ')
     print('Введите b: ')
@@ -270,7 +276,7 @@ def equation_subtraction():
     b = 0
     c = 0
 
-    print('Уравнение типа: a-b=c')
+    print('Уравнение типа: a - b = c')
     print('Введите a: ')
     a = input('| > ')
     print('Введите b: ')
@@ -299,7 +305,7 @@ def equation_multiplication():
     b = 0
     c = 0
 
-    print('Уравнение типа: a*b=c')
+    print('Уравнение типа: a * b = c')
     print('Введите а: ')
     a = input('| > ')
     print('Введите b: ')
@@ -336,7 +342,7 @@ def equation_division():
     b = 0
     c = 0
 
-    print('Уравнения типа: a/b=c')
+    print('Уравнения типа: a / b = c')
     print('Введите a: ')
     a = input('| > ')
     print('Введите b: ')
