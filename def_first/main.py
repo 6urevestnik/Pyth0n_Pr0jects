@@ -89,35 +89,62 @@ def credits():
     print('|=========================================================|')
 
 #_______________________________________________________________________
-# [2] Калькулятор - вводная часть
+
+# [2] >> Калькулятор - меню
 def calculator_menu():
     print('|=========================================================|')
     print('| Дотсупные операции:                                     |')
-    print('| [+] >> Сложение (+)                                     |')
-    print('| [-] >> Вычитание (-)                                    |')
-    print('| [*] >> Умножение (*)                                    |')
-    print('| [/] >> Деление (/)                                      |')
-    print('| [%] >> Процент от числа (%)                             |')
-    print('| [S] >> Special division                                 |')
+    print('| [1] >> Сложение (+)                                     |')
+    print('| [2] >> Вычитание (-)                                    |')
+    print('| [3] >> Умножение (*)                                    |')
+    print('| [4] >> Деление (/)                                      |')
+    print('| [5] >> Процент от числа (%)                             |')
+    print('| [6] >> Special division                                 |')
     print('|=========================================================|')
 
-# Калькулятор - операция плюс
-def calculator_plus():
+# [2] >> Калькулятор - меню выбора
+def calculator_selection_def():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+
+        calculator_menu()
+        print('Введите номер операции: ')
+
+        calculator_selection = input('| > ')
+
+        if calculator_selection == '1':
+            calculator_addition()
+        elif calculator_selection == '2':
+            calculator_subtraction()
+        elif calculator_selection == '3':
+            calculator_multiplication()
+        elif calculator_selection == '4':
+            calculator_division()
+        elif calculator_selection == '5':
+            calculator_percent()
+        elif calculator_selection == '6':
+            calculator_special_division()
+
+        print('Повторяем?')
+        will_repeat = input('| > ')
+
+# [2] >> Калькулятор - сложение
+def calculator_addition():
     print('Введите числа которые нужно сложить: ')
     a = int(input('| > '))
     b = int(input('| > '))
     c = a + b
     print(f'Ответ: {c}')
 
-# Калькулятор - операция минус
-def calculator_minus():
+# [2] >> Калькулятор - вычитание
+def calculator_subtraction():
     print('Введите числа которые нужно отнять: ')
     a = int(input('| > '))
     b = int(input('| > '))
     c = a - b
     print(f'Ответ: {c}')
 
-# Калькулятор - операция умножение
+# [2] >> Калькулятор - умножение
 def calculator_multiplication():
     print('Первый множитель: ')
     a = int(input('| > '))
@@ -126,19 +153,18 @@ def calculator_multiplication():
     c = a * b
     print(f'Ответ: {c}')
 
-# Калькулятор - операция деление
+# [2] >> Калькулятор -  деление
 def calculator_division():
     print('Введите числа которые нужно разделить: ')
     a = int(input('|> '))
     b = int(input('|> '))
 
-    if b == 0:
-        print('Ошибка! На 0 делить нельзя! Попробуй ещё раз.')
+    if b != 0:
+        print(f'Ответ: {a} / {b}')
     else:
-        c = a / b
-        print(f'Ответ: {c}')
+        print('Ошибка! На 0 делить нельзя!')
 
-# Калькулятор - операция процент от числа
+# [2] >> Калькулятор -  процент от числа
 def calculator_percent():
     print('Введите число :')
     a = int(input('| > '))
@@ -147,24 +173,27 @@ def calculator_percent():
     c = a * b / 100
     print(f'{b}% от числа {a} = {c}')
 
-# Калькулятор - специальное деление
+# [2] >> Калькулятор - специальное деление
 def calculator_special_division():
     print('| Введите делимое: ')
     a = int(input('| > '))
     print('| Введите делитель: ')
     b = int(input('| > '))
-    if b == 0:
-        print('Ошибка! На 0 делить нельзя! Попробуй ещё раз.')
-    else:
-        c1 = a/b
-        c2 = a//b
-        c3 = a%b
+
+    if b != 0:
+        c1 = a / b
+        c2 = a // b
+        c3 = a % b
         print(c1)
         print(type(c1))
+        print('')
         print(c2)
         print(type(c2))
+        print('')
         print(c3)
         print(type(c3))
+    else:
+        print('Ошибка! На 0 делить нельзя!')
 # _______________________________________________________________________
 
 
@@ -195,7 +224,7 @@ def equation_addition():
         print(operand_3 - operand_1)
     elif operand_3 == 'x':
         operand_1 = int(operand_1)
-        opernad_2 = int(operand_2)
+        operand_2 = int(operand_2)
         print('Ответ:')
         print(operand_1 + operand_3)
 
@@ -218,7 +247,7 @@ def equation_difference():
         operand_3 = int(operand_3)
         print('Ответ: ')
         print(operand_1 - operand_3)
-    elif eq3 == 'x':
+    elif operand_3 == 'x':
         operand_1 = int(operand_1)
         operand_2 = int(operand_2)
         print('Ответ: ')
@@ -243,7 +272,7 @@ def equation_multiplication():
         operand_3 = int(operand_3)
         print('Ответ: ')
         print(operand_3 / operand_1)
-    elif eq3 == 'x':
+    elif operand_3 == 'x':
         operand_1 = int(operand_1)
         operand_2 = int(operand_2)
         print('Ответ: ')
@@ -407,21 +436,23 @@ while working !='E':
 
 # [2] - Калькулятор с выбором функции
     elif working == '2':
-        calculator_menu()
-        print('| Введите знак операции: ')
-        operation_calculate = input('| > ')
-        if operation_calculate == '+':
-            calculator_plus()
-        elif operation_calculate == '-':
-            calculator_minus()
-        elif operation_calculate == '*':
-            calculator_multiplication()
-        elif operation_calculate == '/':
-            calculator_division()
-        elif operation_calculate == '%':
-            calculator_percent()
-        elif operation_calculate == 'S':
-            calculator_special_division()
+        calculator_selection_def()
+
+        # ------ Меняю
+        # print('| Введите знак операции: ')
+        # operation_calculate = input('| > ')
+        # if operation_calculate == '+':
+        #     calculator_plus()
+        # elif operation_calculate == '-':
+        #     calculator_minus()
+        # elif operation_calculate == '*':
+        #     calculator_multiplication()
+        # elif operation_calculate == '/':
+        #     calculator_division()
+        # elif operation_calculate == '%':
+        #     calculator_percent()
+        # elif operation_calculate == 'S':
+        #     calculator_special_division()
 
 # [3] - Счётчики
     elif working == '3':
