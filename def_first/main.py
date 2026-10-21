@@ -3,7 +3,7 @@
 # Главное меню
 def main_menu():
     print('|=========================================================|')
-    print('|                  -=[Something v.1]=-                    |')
+    print('|                  _-=[Something v.1]=-_                  |')
     print('|=========================================================|')
     print('|                    | [Main menu] |                      |')
     print('|                                                         |')
@@ -11,7 +11,7 @@ def main_menu():
     print('| [3] >> Counter      [4] >> Equation                     |')
     print('| [5] >> Comparison   [6] >> Exponentiation               |')
     print('| [7] >> Even or not  [8] >> Middle arifmetic (average)   |')
-    print('| [?] >> ???          [?] >> ???                          |')
+    print('| [9] >> Output       [?] >> ???                          |')
     print('|                                                         |')
     print('| [H] >> Help         [A] >> About                        |')
     print('| [C] >> Credits      [F] >> Pay respect                  |')
@@ -713,6 +713,27 @@ def arithmetic_mean():
         print('|====================================================|')
         will_repeat = input('| > ')
 
+def output_menu():
+    print('|==================|')
+    print('| Тут будет меню   |')
+    print('|==================|')
+
+def output_selection_menu():
+    output_menu()
+    print('|========================|')
+    print('| Тут будет меню выбора  |')
+    print('|========================|')
+
+    print('| Введите номер операции')
+    output_selection = input('| > ')
+    if output_selection == '1':
+        output_assigment()
+
+def output_assigment():
+    print('|==================|')
+    print('| тут присваивание |')
+    print('|==================|')
+
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
@@ -816,6 +837,10 @@ while working !='E':
 # [8] - Поиск среднего арифметического
     elif working == '8':
         arithmetic_mean()
+
+# [9] - Вывод
+    elif working == '9':
+        output_selection_menu()
 
     elif working == '00':
         print('T3ST_Z0n3')
