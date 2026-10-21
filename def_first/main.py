@@ -57,7 +57,7 @@ def about():
     print('| [+] creating unnecessary menus                          |')
     print('| [+] input / print                                       |')
     print('| [+] if / elif / else                                    |')
-    print('| [+] while                                               |')
+    print('| [+] while / for                                         |')
     print('| [+] def                                                 |')
     print('| [ ] world domination                                    |')
     print('| [ ] become a god                                        |')
@@ -126,8 +126,11 @@ def calculator_selection_menu():
         elif calculator_selection == '6':
             calculator_special_division()
 
-        print('Повторяем? Y/N')
-        will_repeat = input('| > ')
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ').strip().upper()
 
 # [2] >> Калькулятор - сложение
 def calculator_addition():
@@ -238,8 +241,11 @@ def equation_selection_menu():
         elif equation_selection == '4':
             equation_division()
 
-        print('Повторяем? Y/N')
-        will_repeat = input('| > ')
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ').strip().upper()
 
 # [4] >> Уравнения - сложение
 def equation_addition():
@@ -399,8 +405,11 @@ def comparison_selection_menu():
         elif comparison_selection == '3':
             clever_comparison_four_numbers()
 
-        print('Повторяем? Y/N')
-        will_repeat = input('| > ')
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ').strip().upper()
 
 # [5] >> Сравнение двух чисел
 def comparison_two_numbers():
@@ -631,8 +640,11 @@ def exponentiation_selection_menu():
         elif exponentiation_selection == '3':
             exponentiation_squaring_square()
 
-        print('Повторяем? Y/N')
-        will_repeat = input('| > ')
+        print('|====================================================|')
+        print('| Повторим?                                          |')
+        print('| Введи Y - для повтора, N - для пропуска            |')
+        print('|====================================================|')
+        will_repeat = input('| > ').strip().upper()
 
 # [6] >> Возведение в степень - квадрат
 def exponentiation_square():
@@ -671,7 +683,9 @@ def even_or_not():
         print('| Повторим?                                          |')
         print('| Введи Y - для повтора, N - для пропуска            |')
         print('|====================================================|')
-        will_repeat = input('| > ')
+        will_repeat = input('| > ').strip().upper()
+
+#_______________________________________________________________________________________________________________________
 
 # [8] - Поиск среднего арифметического
 def arithmetic_mean():
@@ -711,13 +725,17 @@ def arithmetic_mean():
         print('| Повторим?                                          |')
         print('| Введи Y - для повтора, N - для пропуска            |')
         print('|====================================================|')
-        will_repeat = input('| > ')
+        will_repeat = input('| > ').strip().upper()
 
+#_______________________________________________________________________________________________________________________
+
+# [9] >> Вывод - меню
 def output_menu():
     print('|==================|')
     print('| Тут будет меню   |')
     print('|==================|')
 
+# [9] >> Вывод - меню выбора
 def output_selection_menu():
     output_menu()
     print('|========================|')
@@ -729,6 +747,7 @@ def output_selection_menu():
     if output_selection == '1':
         output_assigment()
 
+# [9] >> Вывод - операции с присваиванием
 def output_assigment():
     print('|==================|')
     print('| тут присваивание |')
@@ -745,7 +764,7 @@ main_menu()
 working = 'works'
 while working !='E':
     print('| Введите идентификатор функции :')
-    working = input('| > ')
+    working = input('| > ').strip()
 
 #Тут надо будет поменять порядок на более системный, либо сначала буквы, а потом цифры, либо по смыслу что важнее
     if working == 'H':
