@@ -156,10 +156,22 @@ def calculator_addition():
 
 # [2] >> Калькулятор - вычитание
 def calculator_subtraction():
-    print('Операция типа: a - b = c')
-    print('Введите числа которые нужно отнять: ')
-    a = int(input('| > '))
-    b = int(input('| > '))
+    print('|====================================================|')
+    print('| Введите числа которые нужно отнять.                |')
+    print('| Операция типа: a - b = c                           |')
+    print('|====================================================|')
+
+    while True:
+        try:
+            print("Введите а: ")
+            a = int(input('| > '))
+            print("Введите b")
+            b = int(input('| > '))
+            break
+
+        except ValueError as error:
+            print(f"Ошибка - {error}! Введите число!")
+
     c = a - b
     print(f'Ответ: {c}')
 
