@@ -55,7 +55,7 @@ def about():
     print('|                                                         |')
     print('| CURRENT SKILLS:                                         |')
     print('| [+] creating unnecessary menus                          |')
-    print('| [+] input / print                                       |')
+    print('| [+] print / input                                       |')
     print('| [+] if / elif / else                                    |')
     print('| [+] while / for                                         |')
     print('| [+] def                                                 |')
@@ -171,6 +171,7 @@ def calculator_subtraction():
 
         except ValueError as error:
             print(f"Ошибка - {error}! Введите число!")
+            continue
 
     c = a - b
     print(f'Ответ: {c}')
@@ -484,10 +485,6 @@ def comparison_two_numbers():
 
 # [5] >> Сравнение - умное сравнение (три числа)
 def clever_comparison_three_numbers():
-    a = 0
-    b = 0
-    c = 0
-
     largest = 0
     middle = 0
     smallest = 0
@@ -496,7 +493,6 @@ def clever_comparison_three_numbers():
     a = int(input('| > '))
     b = int(input('| > '))
     c = int(input('| > '))
-    d = int(input('| > '))
 
     if a > b and a > c:
         largest = a
@@ -632,8 +628,18 @@ def clever_comparison_four_numbers():
                 middle_low = d
                 smallest = a
 
+        if d > a and d > b:
+            middle_high = d
+
+            if a > b:
+                middle_low = a
+                smallest = b
+            else:
+                middle_low = b
+                smallest = a
+
     elif d > a and d > b and d > c:     #largest = d
-        largest = b
+        largest = d
 
         if a > b and a > c:
             middle_high = a
