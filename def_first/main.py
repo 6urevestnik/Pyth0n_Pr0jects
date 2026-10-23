@@ -192,19 +192,37 @@ def calculator_multiplication():
 
         except ValueError:
             print("Ошибка! Введите число!")
+            continue
 
     c = a * b
     print(f'Ответ: {c}')
 
 # [2] >> Калькулятор -  деление
 def calculator_division():
-    print('Операция типа: a / b = c')
-    print('Введите числа которые нужно разделить: ')
-    a = int(input('|> '))
-    b = int(input('|> '))
+    print('|====================================================|')
+    print('| Операция типа: a / b = c                           |')
+    print('| Введите числа которые нужно разделить:             |')
+    print('|====================================================|')
+
+    while True:
+        try:
+            print("Введите a: ")
+            a = int(input('|> '))
+            print("Введите b: ")
+            b = int(input('|> '))
+            break
+
+        except ValueError:
+            print("Ошибка! Введите число!")
+            continue
+
+        except ZeroDivisionError:
+            print("Ошибка! На ноль делить нельзя!")
+            continue
+
 
     if b != 0:
-        print(f'Ответ: {a} / {b}')
+        print(f'Ответ: {a / b}')
     else:
         print('Ошибка! На 0 делить нельзя!')
 
