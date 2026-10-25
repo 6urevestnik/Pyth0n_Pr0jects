@@ -1,11 +1,9 @@
 shopping_list = ["Молоко", "Хлеб", "Колбаса", "Яйца", "Макароны", "Сыр", "Спагетти", "Сосиски", "Соус песто", "Печеньки",]
 
-print(shopping_list)
-print("")
 
 while shopping_list:
-    item = shopping_list.pop(0)
     print(shopping_list)
+    item = shopping_list.pop(0)
     print("Купить:" + item)
     print("")
 
