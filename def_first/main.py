@@ -262,9 +262,12 @@ def calculator_special_division():
 
 # [3] >> Счётчики - меню
 def counter_menu():
-    print("|=========================================================|")
-    print("| [1] >> Addition                                         |")
-    print("|=========================================================|")
+    print('|=========================================================|')
+    print("|                 '+_-={Counter}=-_+'                     |")
+    print('|=========================================================|')
+    print('| [1] >> Addition            [2] >> Subtracrion           |')
+    print('| [3] >> Multiplication      [4] >> Division              |')
+    print('|=========================================================|')
 
 # [3] >> Счётчики - меню выбора
 def counter_selection_menu():
@@ -277,6 +280,10 @@ def counter_selection_menu():
 
         if counter_selection == 1:
             counter_addition()
+        elif counter_selection == 2:
+            counter_subtraction()
+        elif counter_selection == 3:
+            counter_multiplication()
 
         print('Repeat? Y/N')
         will_repeat = input('| > ')
@@ -317,6 +324,26 @@ def counter_subtraction():
         elif b == 'stop':
             break
     print('Результат: ', a)
+
+# [3] >> Счётчики - умножение
+def counter_multiplication():
+    a = 1
+    b = 0
+
+    print('Введите числа для умножения: ')
+
+    while b != 'stop':
+        b = input('| > ')
+
+        if b != 'stop':
+            b = int(b)
+            a *= b
+            print('Ответ: ', a)
+
+        elif b == 'stop':
+            break
+    print('Результат: ', a)
+
 
 #_______________________________________________________________________________________________________________________
 
