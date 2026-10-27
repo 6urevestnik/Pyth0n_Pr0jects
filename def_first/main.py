@@ -284,6 +284,8 @@ def counter_selection_menu():
             counter_subtraction()
         elif counter_selection == 3:
             counter_multiplication()
+        elif counter_selection == 4:
+            counter_division()
 
         print('Repeat? Y/N')
         will_repeat = input('| > ')
@@ -304,6 +306,7 @@ def counter_addition():
 
         elif b == 'stop':
             break
+
     print("Результат: ", a)
 
 # [3] >> Счётчики - вычитание
@@ -323,6 +326,7 @@ def counter_subtraction():
 
         elif b == 'stop':
             break
+
     print('Результат: ', a)
 
 # [3] >> Счётчики - умножение
@@ -342,8 +346,27 @@ def counter_multiplication():
 
         elif b == 'stop':
             break
+
     print('Результат: ', a)
 
+# [3] >> Счётчики - деление
+def counter_division():
+    print('Введите числа для деления: ')
+    a = int(input('| > '))
+    b = 1
+
+    while b != 'stop':
+        b = input('| > ')
+
+        if b != 'stop':
+            b = int(b)
+            a /= b
+            print(a)
+
+        elif b == 'stop':
+            break
+
+    print('Результат: ', a)
 
 #_______________________________________________________________________________________________________________________
 
