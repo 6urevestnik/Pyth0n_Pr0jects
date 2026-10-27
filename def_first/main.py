@@ -953,61 +953,10 @@ while working !='E':
 # [2] - Калькулятор с выбором функции
     elif working == '2':
         calculator_selection_menu()
-    elif working == '33':
-        counter_selection_menu()
 
-#_______________________________________________________________________________________________________________________
-
-    # [3] - Счётчики
+# [3] - Счётчики
     elif working == '3':
-        print('| Введите знак операции')
-        opr2 = input('| > ')
-
-# Счётчик суммы
-        if opr2 == '+':
-            a = 0
-            b = int(input('| > '))
-            if b != 0:
-                while b != 0:
-                    a = a + b
-                    print(a)
-                    b = int(input('| > '))
-                print(f'Ответ: {a}')
-
-# Счётчик разности
-        if opr2 == '-':
-            a = int(input('| > '))
-            b = int(input('| > '))
-            if b != 0:
-                while b != 0:
-                    a = a - b
-                    print(a)
-                    b = int(input('| > '))
-                print(f'Ответ: {a}')
-
-# Счётчик произведения
-        if opr2 == '*':
-            a = int(input('| > '))
-            b = int(input('| > '))
-            if b != 0:
-                while b != 0:
-                    a = a * b
-                    print(a)
-                    b = int(input('| > '))
-                print(f'Ответ: {a}')
-
-# Счётчик деления
-        if opr2 == '/':
-            a = int(input('| > '))
-            b = int(input('| > '))
-            if b != 0:
-                while b != 0:
-                   a = a / b
-                   print(a)
-                   b = int(input('| > '))
-                print(f'Ответ: {a}')
-
-#_______________________________________________________________________________________________________________________
+        counter_selection_menu()
 
 # [4] - Уравнения
     elif working == '4':
