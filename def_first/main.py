@@ -260,6 +260,40 @@ def calculator_special_division():
         print('Ошибка! На 0 делить нельзя!')
 #_______________________________________________________________________________________________________________________
 
+# [3] - Счётчики меню
+def counter_menu():
+    print("|=========================================================|")
+    print("| [1] >> Addition                                         |")
+    print("|=========================================================|")
+
+def counter_selection_menu():
+    will_repeat = 'Y'
+    while will_repeat == 'Y':
+        counter_menu()
+
+        print("Укажите номер операции: ")
+        counter_selection = int(input('| > '))
+
+        if counter_selection == 1:
+            counter_addition()
+
+def counter_addition():
+    a = 0
+    b = 0
+    print("Введите числа для сложения: ")
+
+    while b != 'stop':
+        b = input('| > ')
+
+        if b != 'stop':
+            b = int(b)
+            a += b
+            print("Ответ:", a)
+
+        elif b == 'stop':
+            break
+    print("Результат: ")
+
 
 # [F] - Выражаю уважение
 def respect():
