@@ -260,12 +260,13 @@ def calculator_special_division():
         print('Ошибка! На 0 делить нельзя!')
 #_______________________________________________________________________________________________________________________
 
-# [3] - Счётчики меню
+# [3] >> Счётчики - меню
 def counter_menu():
     print("|=========================================================|")
     print("| [1] >> Addition                                         |")
     print("|=========================================================|")
 
+# [3] >> Счётчики - меню выбора
 def counter_selection_menu():
     will_repeat = 'Y'
     while will_repeat == 'Y':
@@ -277,6 +278,10 @@ def counter_selection_menu():
         if counter_selection == 1:
             counter_addition()
 
+        print('Repeat? Y/N')
+        will_repeat = input('| > ')
+
+# [3] >> Счётчики - сложение
 def counter_addition():
     a = 0
     b = 0
@@ -288,11 +293,32 @@ def counter_addition():
         if b != 'stop':
             b = int(b)
             a += b
-            print("Ответ:", a)
+            print('Ответ: ', a)
 
         elif b == 'stop':
             break
-    print("Результат: ")
+    print("Результат: ", a)
+
+# [3] >> Счётчики - вычитание
+def counter_subtraction():
+    a = 0
+    b = 0
+    print('Введите числа для вычитания: ')
+    a = int(input('| > '))
+
+    while b != 'stop':
+        b = input('| > ')
+
+        if b != 'stop':
+            b = int(b)
+            a -= b
+            print('Ответ: ',a)
+
+        elif b == 'stop':
+            break
+    print('Результат: ', a)
+
+#_______________________________________________________________________________________________________________________
 
 
 # [F] - Выражаю уважение
@@ -877,6 +903,8 @@ while working !='E':
 # [2] - Калькулятор с выбором функции
     elif working == '2':
         calculator_selection_menu()
+    elif working == '33':
+        counter_selection_menu()
 
 #_______________________________________________________________________________________________________________________
 
