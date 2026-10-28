@@ -1,46 +1,38 @@
-print('Hello there!')
-
-def show_all():
-    print(arr_1)
-    print(arr_2)
-    print(arr_3)
-
-def vertical_check():
-    for i in range(1):
-        if arr_1[i] == arr_2[i] == arr_3[i]:
-            print('Успех! Три в ряд!')
-            print(arr_1[i], arr_2[i], arr_3[i])
-        else:
-            print('Проверяю дальше...')
-
-def horizontal_check():
-    print('in progress...')
+# Тут все функции
 
 def start_menu():
-    print('in progress...')
+    print('in progress')
+
+def show_all():
+    print(line_1)
+    print(line_2)
+    print(line_3)
+    print(line_4)
+    print(line_5)
+    print(line_6)
+    print(line_7)
+    print(line_8)
+    print(line_9)
+    print(line_10)
+    print(line_11)
+    print(line_12)
+
+def vertical_check():
+    for i in range(11):
+        if line_1[i] == line_2[i] == line_3[i]:
+            print('Успех! Три в ряд!')
+            print(line_1[i], line_2[i], line_3[i])
+
+def horizontal_check():
+    for i in range(9):
+        if line_1[i] == line_1[i+1] == line_1[i+2]:
+            print('Успех! Три в ряд!')
+            print(i, i+1, i+2)
+
+
 #===========================================================================================
 
-arr_1 = ['b', 'a', 'a' ]
-arr_2 = ['d', 'c', 'b' ]
-arr_3 = ['a', 'd', 'c' ]
-show_all()
-print('|==========================================================|')
-print('')
-
-# Создаю горизонтальную проверку три-в-ряд в трех массивах
-
-for i in range(1):
-    if arr_1[i] == 'a' and arr_1[i+1] == 'a' and arr_1[i+2] == 'a':
-        print(arr_1[i], arr_1[i+1], arr_1[i+2])
-        print('Три в ряд! Успех')
-        print(arr_1.index(arr_1[i]), arr_1.index(arr_1[i+1]), arr_1.index(arr_1[i+2]))
-
-print('|======================|')
-print('|   please stand by    |')
-print('|======================|')
-
-print('|==========================================================|')
-
+# Тут начало
 import random
 
 letters = ['a', 'b', 'c', 'd']
@@ -70,15 +62,5 @@ for i in range(12):
     line_10.append(random.choice(letters))
     line_11.append(random.choice(letters))
     line_12.append(random.choice(letters))
-print(line_1)
-print(line_2)
-print(line_3)
-print(line_4)
-print(line_5)
-print(line_6)
-print(line_7)
-print(line_8)
-print(line_9)
-print(line_10)
-print(line_11)
-print(line_12)
+
+show_all()

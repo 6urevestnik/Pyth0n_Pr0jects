@@ -799,7 +799,7 @@ def clever_comparison_four_numbers():
 # [6] >> Возведение в степень - меню
 def exponentiation_menu():
     print('|=========================================================|')
-    print('|            -=[Exponentiation_menu]=-                  |')
+    print('|            -=[Exponentiation_menu]=-                    |')
     print('|=========================================================|')
     print('| Функции возведения в степень:                           |')
     print('| [1] >> Возведение в квадрат          - a * a            |')
