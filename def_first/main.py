@@ -1,4 +1,6 @@
 #Тут_функции
+from sys import excepthook
+
 
 # Главное меню
 def main_menu():
@@ -225,7 +227,6 @@ def calculator_division():
             print("Ошибка! На ноль делить нельзя!")
             continue
 
-
     if b != 0:
         print(f'Ответ: {a / b}')
     else:
@@ -233,13 +234,19 @@ def calculator_division():
 
 # [2] >> Калькулятор -  процент от числа
 def calculator_percent():
-    print('Операция типа: a * b / 100 = c')
-    print('Введите число :')
-    a = int(input('| > '))
-    print('Введите процент от числа :')
-    b = int(input('| > '))
-    c = a * b / 100
-    print(f'{b}% от числа {a} = {c}')
+    while True:
+        try:
+            print('Операция типа: a * b / 100 = c')
+            print('Введите число :')
+            a = int(input('| > '))
+            print('Введите процент от числа :')
+            b = int(input('| > '))
+            c = a * b / 100
+            print(f'{b}% от числа {a} = {c}')
+            break
+
+        except ValueError:
+            print("Ошибка! Введите число!")
 
 # [2] >> Калькулятор - специальное деление
 def calculator_special_division():
