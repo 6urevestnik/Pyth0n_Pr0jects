@@ -475,7 +475,8 @@ def equation_addition():
                 c = int(c)
                 a = c - b
                 print(f'Ответ:\n'
-                      f'c - b = {c - b}\n'
+                      f'a = c - b\n'
+                      f'{c} - {b} = {c - b}\n'
                       f'{a} + {b} = {c}')
                 break
 
@@ -484,7 +485,8 @@ def equation_addition():
                 c = int(c)
                 b = c - a
                 print(f'Ответ:\n'
-                      f'c - a = {c - a}\n'
+                      f'b = c - a\n'
+                      f'{c} - {a} = {c - a}\n'
                       f'{a} + {b} = {c}')
                 break
 
@@ -493,7 +495,8 @@ def equation_addition():
                 b = int(b)
                 c = a + b
                 print(f'Ответ:\n'
-                      f'a + b = {a + b}\n'
+                      f'c = a + b\n'
+                      f'{a} + {b} = {a + b}\n'
                       f'{a} + {b} = {c}')
                 break
 
@@ -519,9 +522,10 @@ def equation_subtraction():
     if a == 'x':
         b = int(b)
         c = int(c)
-        a = c - b
+        a = c + b
         print(f'Ответ:\n'
-              f'c - b = {c - b}\n'
+              f'a = c + b\n'
+              f'{c} + {b} = {c + b}\n'
               f'{a} - {b} = {c}')
 
     elif b == 'x':
@@ -529,7 +533,8 @@ def equation_subtraction():
         c = int(c)
         b = a - c
         print(f'Ответ:\n'
-              f'a - c = {a - c}\n'
+              f'b= a - c\n'
+              f'{a} - {c} = {a - c}\n'
               f'{a} - {b} = {c}')
 
     elif c == 'x':
@@ -537,7 +542,8 @@ def equation_subtraction():
         b = int(b)
         c = a - b
         print(f'Ответ:\n'
-              f'a - b = {a - b}\n'
+              f'c = a - b\n'
+              f'{a} - {b} = {a - b}\n'
               f'{a} - {b} = {c}')
 
 # [4] >> Уравнения - умножение
@@ -547,35 +553,54 @@ def equation_multiplication():
     c = 0
 
     print('Уравнение типа: a * b = c')
-    print('Введите а: ')
-    a = input('| > ')
-    print('Введите b: ')
-    b = input('| > ')
-    print('Введите c: ')
-    c = input('| > ')
-    if a == 'x':
-        b = int(b)
-        c = int(c)
-        if b != 0:
-            print('Ответ: ')
-            print(c / b)
-        else:
-            print('Ошибка! На ноль делить нельзя!')
 
-    elif b == 'x':
-        a = int(a)
-        c = int(c)
-        if a != 0:
-            print('Ответ: ')
-            print(c / a)
-        else:
-            print('Ошибка! На ноль делить нельзя!')
+    while True:
+        try:
+            print('Введите а: ')
+            a = input('| > ')
+            print('Введите b: ')
+            b = input('| > ')
+            print('Введите c: ')
+            c = input('| > ')
 
-    elif c == 'x':
-        a = int(a)
-        b = int(b)
-        print('Ответ: ')
-        print(a * b)
+            if a == 'x':
+                b = int(b)
+                c = int(c)
+
+                a = c / b
+                print(f'Ответ:\n'
+                      f'a = c / b\n'
+                      f'{c} / {b} = {c / b}\n'
+                      f'{a} * {b} = {c}')
+                break
+
+            elif b == 'x':
+                a = int(a)
+                c = int(c)
+
+                b = c / a
+                print(f'Ответ:\n'
+                      f'b = c / a\n'
+                      f'{c} / {a} = {c / a}\n'
+                      f'{a} * {b} = {c}')
+                break
+
+            elif c == 'x':
+                a = int(a)
+                b = int(b)
+                print(f'Ответ:\n'
+                      f'c = a * b\n'
+                      f'{a} * {b} = {a * b}\n'
+                      f'{a} * {b} = {c}\n')
+                break
+
+        except ValueError:
+            print('Ошибка! Введите число!')
+            continue
+
+        except ZeroDivisionError:
+            print('Ошибка! a и/или b не могут быть равны нулю!')
+            continue
 
 # [4] >> Уравнения - деление
 def equation_division():
