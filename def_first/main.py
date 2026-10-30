@@ -247,6 +247,7 @@ def calculator_percent():
 
         except ValueError:
             print("Ошибка! Введите число!")
+            continue
 
 # [2] >> Калькулятор - специальное деление
 def calculator_special_division():
@@ -311,15 +312,21 @@ def counter_addition():
     print("Введите числа для сложения: ")
 
     while b != 'stop':
-        b = input('| > ')
+        while True:
+            try:
+                b = input('| > ')
 
-        if b != 'stop':
-            b = int(b)
-            a += b
-            print('Ответ: ', a)
+                if b != 'stop':
+                    b = int(b)
+                    a += b
+                    print('Ответ: ', a)
 
-        elif b == 'stop':
-            break
+                elif b == 'stop':
+                    break
+
+            except ValueError:
+                print("Ошибка! Введите число!")
+                continue
 
     print("Результат: ", a)
 
