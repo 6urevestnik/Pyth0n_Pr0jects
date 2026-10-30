@@ -460,27 +460,46 @@ def equation_addition():
     c = 0
 
     print('Уравнение типа: a + b = c')
-    print('Введите a: ')
-    a = input('| > ')
-    print('Введите b: ')
-    b = input('| > ')
-    print('Введите c: ')
-    c = input('| > ')
-    if a == 'x':
-        b = int(b)
-        c = int(c)
-        print('Ответ:')
-        print(c - b)
-    elif b == 'x':
-        a = int(a)
-        c = int(c)
-        print('Ответ: ')
-        print(c - a)
-    elif c == 'x':
-        a = int(a)
-        b = int(b)
-        print('Ответ:')
-        print(a + b)
+
+    while True:
+        try:
+            print('Введите a: ')
+            a = input('| > ')
+            print('Введите b: ')
+            b = input('| > ')
+            print('Введите c: ')
+            c = input('| > ')
+
+            if a == 'x':
+                b = int(b)
+                c = int(c)
+                a = c - b
+                print(f'Ответ:\n'
+                      f'c - b = {c - b}\n'
+                      f'{a} + {b} = {c}')
+                break
+
+            elif b == 'x':
+                a = int(a)
+                c = int(c)
+                b = c - a
+                print(f'Ответ:\n'
+                      f'c - a = {c - a}\n'
+                      f'{a} + {b} = {c}')
+                break
+
+            elif c == 'x':
+                a = int(a)
+                b = int(b)
+                c = a + b
+                print(f'Ответ:\n'
+                      f'a + b = {a + b}\n'
+                      f'{a} + {b} = {c}')
+                break
+
+        except ValueError:
+            print("Ошибка! Ведите число!")
+            continue
 
 # [4] >> Уравнения - разность
 def equation_subtraction():
@@ -489,27 +508,37 @@ def equation_subtraction():
     c = 0
 
     print('Уравнение типа: a - b = c')
+
     print('Введите a: ')
     a = input('| > ')
     print('Введите b: ')
     b = input('| > ')
     print('Введите c: ')
     c = input('| > ')
+
     if a == 'x':
         b = int(b)
         c = int(c)
-        print('Ответ: ')
-        print(c + b)
+        a = c - b
+        print(f'Ответ:\n'
+              f'c - b = {c - b}\n'
+              f'{a} - {b} = {c}')
+
     elif b == 'x':
         a = int(a)
         c = int(c)
-        print('Ответ: ')
-        print(a - c)
+        b = a - c
+        print(f'Ответ:\n'
+              f'a - c = {a - c}\n'
+              f'{a} - {b} = {c}')
+
     elif c == 'x':
         a = int(a)
         b = int(b)
-        print('Ответ: ')
-        print(a - b)
+        c = a - b
+        print(f'Ответ:\n'
+              f'a - b = {a - b}\n'
+              f'{a} - {b} = {c}')
 
 # [4] >> Уравнения - умножение
 def equation_multiplication():
