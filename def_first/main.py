@@ -157,8 +157,7 @@ def calculator_addition():
             print("Ошибка! Введите число.")
             continue
 
-    c = a + b
-    print(f'Ответ: {c}')
+    print(f'Ответ: {a + b}')
 
 # [2] >> Калькулятор - вычитание
 def calculator_subtraction():
@@ -179,8 +178,7 @@ def calculator_subtraction():
             print(f"Ошибка - {error}! Введите число!")
             continue
 
-    c = a - b
-    print(f'Ответ: {c}')
+    print(f'Ответ: {a - b}')
 
 # [2] >> Калькулятор - умножение
 def calculator_multiplication():
@@ -201,8 +199,7 @@ def calculator_multiplication():
             print("Ошибка! Введите число!")
             continue
 
-    c = a * b
-    print(f'Ответ: {c}')
+    print(f'Ответ: {a * b}')
 
 # [2] >> Калькулятор -  деление
 def calculator_division():
@@ -228,7 +225,7 @@ def calculator_division():
             continue
 
     if b != 0:
-        print(f'Ответ: {a / b}')
+        print(f'Ответ: {a / b:.2f}')
     else:
         print('Ошибка! На 0 делить нельзя!')
 
@@ -257,17 +254,16 @@ def calculator_special_division():
     b = int(input('| > '))
 
     if b != 0:
+        print('')
         c1 = a / b
+        print(f"a / b = {a / b:.2f}\n{type(c1)}\n")
+
         c2 = a // b
+        print(f"a // b = {a // b:.2f}\n{type(c2)}\n")
+
         c3 = a % b
-        print(c1)
-        print(type(c1))
-        print('')
-        print(c2)
-        print(type(c2))
-        print('')
-        print(c3)
-        print(type(c3))
+        print(f"a % b = {a % b:.2f}\n{type(c3)}\n")
+
     else:
         print('Ошибка! На 0 делить нельзя!')
 #_______________________________________________________________________________________________________________________
