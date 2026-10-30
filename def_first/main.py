@@ -389,17 +389,27 @@ def counter_division():
     b = 1
 
     while b != 'stop':
-        b = input('| > ')
+        while True:
+            try:
+                b = input('| > ')
 
-        if b != 'stop':
-            b = int(b)
-            a /= b
-            print(a)
+                if b != 'stop':
+                    b = int(b)
+                    a /= b
+                    print(f'{a:.2f}')
 
-        elif b == 'stop':
-            break
+                elif b == 'stop':
+                    break
 
-    print('Результат: ', a)
+            except ValueError:
+                print('Ошибка! Введите число!')
+                continue
+
+            except ZeroDivisionError:
+                print('Ошибка! На ноль делить нельзя!')
+                continue
+
+    print(f'Результат: {a:.2f}')
 
 #_______________________________________________________________________________________________________________________
 
