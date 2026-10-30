@@ -364,15 +364,21 @@ def counter_multiplication():
     print('Введите числа для умножения: ')
 
     while b != 'stop':
-        b = input('| > ')
+        while True:
+            try:
+                b = input('| > ')
 
-        if b != 'stop':
-            b = int(b)
-            a *= b
-            print('Ответ: ', a)
+                if b != 'stop':
+                    b = int(b)
+                    a *= b
+                    print('Ответ: ', a)
 
-        elif b == 'stop':
-            break
+                elif b == 'stop':
+                    break
+
+            except ValueError:
+                print("Ошибка! Введите число!")
+                continue
 
     print('Результат: ', a)
 
