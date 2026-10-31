@@ -774,142 +774,186 @@ def clever_comparison_four_numbers():
     middle_low = 0
     smallest = 0
 
-    print('Введите четыре числа: ')
-    a = int(input('| > '))
-    b = int(input('| > '))
-    c = int(input('| > '))
-    d = int(input('| > '))
+    while True:
+        try:
 
-    if a > b and a > c and a > d:     #largest = a
-        largest = a
+            print('Введите четыре числа: ')
+            a = int(input('| > '))
+            b = int(input('| > '))
+            c = int(input('| > '))
+            d = int(input('| > '))
 
-        if b > c and b > d:
-            middle_high = b
+            if a > b and a > c and a > d:     #largest = a
+                largest = a
 
-            if c > d:
-                middle_low = c
-                smallest = d
-            else:
-                middle_low = d
-                smallest = c
+                if b > c and b > d:
+                    middle_high = b
 
-        elif c > b and c > d:
-            middle_high = c
+                    if c > d:
+                        middle_low = c
+                        smallest = d
+                        break
 
-            if b > d:
-                middle_low = b
-                smallest = d
-            else:
-                middle_low = d
-                smallest = b
+                    else:
+                        middle_low = d
+                        smallest = c
+                        break
 
-        elif d > b and d > c:
-            middle_high = d
-            if b > c:
-                middle_low = b
-                smallest = c
-            else:
-                middle_low = c
-                smallest = b
+                elif c > b and c > d:
+                    middle_high = c
 
-    elif b > a and b > d and b >c:     #largest = b
-        largest = b
+                    if b > d:
+                        middle_low = b
+                        smallest = d
+                        break
 
-        if a > c and a > d:
-            middle_high = a
+                    else:
+                        middle_low = d
+                        smallest = b
+                        break
 
-            if c > d:
-                middle_low = c
-                smallest = d
-            else:
-                middle_low = d
-                smallest = c
+                elif d > b and d > c:
+                    middle_high = d
 
-        elif c > a and c > d:
-            middle_high = c
+                    if b > c:
+                        middle_low = b
+                        smallest = c
+                        break
 
-            if a > d:
-                middle_low = a
-                smallest = d
-            else:
-                middle_low = d
-                smallest = a
+                    else:
+                        middle_low = c
+                        smallest = b
+                        break
 
-        elif d > a and d > c:
-            middle_high = d
+            elif b > a and b > d and b >c:     #largest = b
+                largest = b
 
-            if a > c:
-                middle_low = a
-                smallest = c
-            else:
-                middle_low = c
-                smallest = a
+                if a > c and a > d:
+                    middle_high = a
 
-    elif c > a and c > b and c > d:      # largest = c
-        largest = c
+                    if c > d:
+                        middle_low = c
+                        smallest = d
+                        break
 
-        if a > b and a > d:
-            middle_high = a
+                    else:
+                        middle_low = d
+                        smallest = c
+                        break
 
-            if b > d:
-                middle_low = b
-                smallest = d
-            else:
-                middle_low = d
-                smallest = b
+                elif c > a and c > d:
+                    middle_high = c
 
-        if b > a and b > d:
-            middle_high = b
+                    if a > d:
+                        middle_low = a
+                        smallest = d
+                        break
 
-            if a > d:
-                middle_low = a
-                smallest = d
-            else:
-                middle_low = d
-                smallest = a
+                    else:
+                        middle_low = d
+                        smallest = a
+                        break
 
-        if d > a and d > b:
-            middle_high = d
+                elif d > a and d > c:
+                    middle_high = d
 
-            if a > b:
-                middle_low = a
-                smallest = b
-            else:
-                middle_low = b
-                smallest = a
+                    if a > c:
+                        middle_low = a
+                        smallest = c
+                        break
 
-    elif d > a and d > b and d > c:     #largest = d
-        largest = d
+                    else:
+                        middle_low = c
+                        smallest = a
+                        break
 
-        if a > b and a > c:
-            middle_high = a
+            elif c > a and c > b and c > d:      # largest = c
+                largest = c
 
-            if b > c:
-                middle_low = b
-                smallest = c
-            else:
-                middle_low = c
-                smallest = b
+                if a > b and a > d:
+                    middle_high = a
 
-        elif b > a and b > c:
-            middle_high = b
+                    if b > d:
+                        middle_low = b
+                        smallest = d
+                        break
 
-            if a > c:
-                middle_low = a
-                smallest = c
-            else:
-                middle_low = c
-                smallest = a
+                    else:
+                        middle_low = d
+                        smallest = b
+                        break
 
-        elif c > a and c > b:
-            middle_high = c
+                if b > a and b > d:
+                    middle_high = b
 
-            if a > b:
-                middle_low = a
-                smallest = b
-            else:
-                middle_low = b
-                smallest = a
+                    if a > d:
+                        middle_low = a
+                        smallest = d
+                        break
+
+                    else:
+                        middle_low = d
+                        smallest = a
+                        break
+
+                if d > a and d > b:
+                    middle_high = d
+
+                    if a > b:
+                        middle_low = a
+                        smallest = b
+                        break
+
+                    else:
+                        middle_low = b
+                        smallest = a
+                        break
+
+            elif d > a and d > b and d > c:     #largest = d
+                largest = d
+
+                if a > b and a > c:
+                    middle_high = a
+
+                    if b > c:
+                        middle_low = b
+                        smallest = c
+                        break
+
+                    else:
+                        middle_low = c
+                        smallest = b
+                        break
+
+                elif b > a and b > c:
+                    middle_high = b
+
+                    if a > c:
+                        middle_low = a
+                        smallest = c
+                        break
+
+                    else:
+                        middle_low = c
+                        mallest = a
+                        break
+
+                elif c > a and c > b:
+                    middle_high = c
+
+                    if a > b:
+                        middle_low = a
+                        smallest = b
+                        break
+
+                    else:
+                        middle_low = b
+                        smallest = a
+                        break
+
+        except ValueError:
+            print('Ошибка! Введите число!')
+            continue
 
     print(f"{largest} > {middle_high} > {middle_low} > {smallest}")
 
