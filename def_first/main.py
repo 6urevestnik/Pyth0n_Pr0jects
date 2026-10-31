@@ -675,20 +675,33 @@ def comparison_selection_menu():
 
 # [5] >> Сравнение двух чисел
 def comparison_two_numbers():
-    print('Введите первое число: ')
-    a = int(input('| > '))
-    print('Введите второе число: ')
-    b = int(input('| > '))
-    if a > b:
-        print(f'Большее число: {a}')
-        print(f'Меньшее меньшее: {b}')
-        print(f'Разница: {a - b}')
-    elif a < b:
-        print(f'Большее число: {b}')
-        print(f'Меньшее меньшее: {a}')
-        print(f'Разница: {b - a}')
-    elif a == b or b == a:
-        print(f' Числа равны: {a == b}')
+    while True:
+        try:
+
+            print('Введите первое число: ')
+            a = int(input('| > '))
+            print('Введите второе число: ')
+            b = int(input('| > '))
+
+            if a > b:
+                print(f'Большее число: {a}')
+                print(f'Меньшее меньшее: {b}')
+                print(f'Разница: {a - b}')
+                break
+
+            elif a < b:
+                print(f'Большее число: {b}')
+                print(f'Меньшее меньшее: {a}')
+                print(f'Разница: {b - a}')
+                break
+
+            elif a == b or b == a:
+                print(f' Числа равны: {a == b}')
+                break
+
+        except ValueError:
+            print('Ошибка! Введите число!')
+            continue
 
 # [5] >> Сравнение - умное сравнение (три числа)
 def clever_comparison_three_numbers():
