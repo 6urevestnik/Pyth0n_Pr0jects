@@ -709,36 +709,56 @@ def clever_comparison_three_numbers():
     middle = 0
     smallest = 0
 
-    print('Введите три числа: ')
-    a = int(input('| > '))
-    b = int(input('| > '))
-    c = int(input('| > '))
+    while True:
+        try:
 
-    if a > b and a > c:
-        largest = a
-        if b > c:
-            middle = b
-            smallest = c
-        else:
-            middle = c
-            smallest = b
-    elif b > a and b > c:
-        largest = b
-        if a > c:
-            middle = a
-            smallest = c
-        else:
-            middle = c
-            smallest = a
+            print('Введите три числа: ')
+            a = int(input('| > '))
+            b = int(input('| > '))
+            c = int(input('| > '))
 
-    elif c > a and c > b:
-        largest = c
-        if a > b:
-            middle = a
-            smallest = b
-        else:
-            middle = b
-            smallest = a
+            if a > b and a > c:
+                largest = a
+
+                if b > c:
+                    middle = b
+                    smallest = c
+                    break
+
+                else:
+                    middle = c
+                    smallest = b
+                    break
+
+            elif b > a and b > c:
+                largest = b
+
+                if a > c:
+                    middle = a
+                    smallest = c
+                    break
+
+                else:
+                    middle = c
+                    smallest = a
+                    break
+
+            elif c > a and c > b:
+                largest = c
+
+                if a > b:
+                    middle = a
+                    smallest = b
+                    break
+
+                else:
+                    middle = b
+                    smallest = a
+                    break
+
+        except ValueError:
+            print('Ошибка! Введите число!')
+            continue
 
     print(f"{largest} > {middle} > {smallest}")
 
