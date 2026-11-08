@@ -21,44 +21,74 @@ def show_all():
 def vertical_check():
     for i in range(11):
         if line_1[i] == line_2[i] == line_3[i]:
-            print('Успех! Три в ряд!')
+            print('line 1-3')
             print(line_1[i], line_2[i], line_3[i])
+            line_1[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_2[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_3[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_2[i] == line_3[i] == line_4[i]:
-            print('Успех! Три в ряд!')
+            print('line 2-4')
             print(line_2[i], line_3[i], line_4[i])
+            line_2[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_3[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_4[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_3[i] == line_4[i] == line_5[i]:
-            print('Успех! Три в ряд!')
+            print('line 3-5')
             print(line_3[i], line_4[i], line_5[i])
+            line_3[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_4[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_5[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_4[i] == line_5[i] == line_6[i]:
-            print('Успех! Три в ряд!')
+            print('line 4-6')
             print(line_4[i], line_5[i], line_6[i])
+            line_4[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_5[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_6[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_5[i] == line_6[i] == line_7[i]:
-            print('Успех! Три в ряд!')
+            print('line 5-7')
             print(line_5[i], line_6[i], line_7[i])
+            line_5[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_6[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_7[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_6[i] == line_7[i] == line_8[i]:
-            print('Успех! Три в ряд!')
+            print('line 6-8')
             print(line_6[i], line_7[i], line_8[i])
+            line_6[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_7[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_8[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_7[i] == line_8[i] == line_9[i]:
-            print('Успех! Три в ряд!')
+            print('line 7-9')
             print(line_7[i], line_8[i], line_9[i])
+            line_7[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_8[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_9[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_8[i] == line_9[i] == line_10[i]:
-            print('Успех! Три в ряд!')
+            print('line 8-10')
             print(line_8[i], line_9[i], line_10[i])
+            line_8[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_9[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_10[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_9[i] == line_10[i] == line_11[i]:
-            print('Успех! Три в ряд!')
+            print('line 9-11')
             print(line_9[i], line_10[i], line_11[i])
+            line_9[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_10[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_11[i] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_10[i] == line_11[i] == line_12[i]:
-            print('Успех! Три в ряд!')
+            print('line 10-12')
             print(line_10[i], line_11[i], line_12[i])
+            line_10[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_11[i] = random.choice(['a', 'b', 'c', 'd'])
+            line_12[i] = random.choice(['a', 'b', 'c', 'd'])
 
 
 # Проверка горизонтальная
@@ -146,8 +176,15 @@ for i in range(12):
     line_12.append(random.choice(letters))
 
 show_all()
-print('horizontal')
-horizontal_check()
+
+#print('horizontal')
+#horizontal_check()
+
+print('vertical')
+vertical_check()
+
+print('|=======================================================================|')
+show_all()
 print('vertical')
 vertical_check()
 
