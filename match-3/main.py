@@ -29,7 +29,7 @@ def vertical_check():
 
     print('Vertical check!')
 
-    for i in range(11):
+    for i in range(len(line_1)):
         if line_1[i] == line_2[i] == line_3[i]:
             print(f'line 1-3: {i} {i+1} {i+2}')
 
@@ -109,13 +109,13 @@ def horizontal_check():
 
     print('Horizontal check!')
 
-    for i in range(9):
+    for i in range(len(line_1)-2):
         if line_1[i] == line_1[i+1] == line_1[i+2]:
             print(f'line_1: {i} {i+1} {i+2}')
 
             line_1[i] = random.choice(['a', 'b', 'c', 'd'])
             line_1[(i+1)] = random.choice(['a', 'b', 'c', 'd'])
-            line_2[(i+2)] = random.choice(['a', 'b', 'c', 'd'])
+            line_1[(i+2)] = random.choice(['a', 'b', 'c', 'd'])
 
         if line_2[i] == line_2[i+1] == line_2[i+2]:
             print(f'line_2: {i} {i+1} {i+2}')
