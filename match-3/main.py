@@ -242,15 +242,8 @@ for i in range(12):
     line_12.append(random.choice(letters))
 
 show_all()
-
-input()
 horizontal_check()
 vertical_check()
-
-
 show_all()
-horizontal_check()
-vertical_check()
-
 
 print(RESET, end='')
