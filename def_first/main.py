@@ -276,6 +276,7 @@ def counter_menu():
     print('| [1] >> Addition            [2] >> Subtracrion           |')
     print('| [3] >> Multiplication      [4] >> Division              |')
     print('|=========================================================|')
+    print('Для завершения вычилений введите - stop')
 
 # [3] >> Счётчики - меню выбора
 def counter_selection_menu():
@@ -1127,6 +1128,11 @@ def float_numbers():
 
 #start - тут начало
 
+GREEN = "\033[32m"
+RESET = "\033[0m"
+
+print(GREEN, end="")
+
 main_menu()
 
 working = 'works'
@@ -1185,3 +1191,5 @@ while working !='E':
 
     elif working == 'E':
         print('Fuck u!')
+
+print(RESET, end="")
